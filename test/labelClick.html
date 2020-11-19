@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>label 标签点击事件</title>
+	<style>
+	input{
+		display: none;
+	}
+	label{
+		/*width: 100px;*/
+		/*height: 100px;*/
+		padding: 20px;
+		border: 1px solid #000;
+		float: left;
+	}
+	</style>
+</head>
+<body>
+	<label for="a">a
+		<input type="text" id="a" name="a">
+		<label for="b">b</label>
+		<input type="text" id="b" name="b">
+	</label>
+</body>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" ></script>
+	<script>
+		$('label').on('click',function(){
+			console.log($(this).text());
+		})
+		$('label[for=b]').on('click',function(){
+			// return false;
+		})
+	</script>
+</html>

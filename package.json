@@ -1,0 +1,22 @@
+{
+  "name": "web-base",
+  "version": "1.0.0",
+  "description": "> 记录 js 知识点与示例  \r [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glk-asdf/web-base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glk-asdf/web-base/issues"
+  },
+  "homepage": "https://github.com/glk-asdf/web-base#readme"
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用canvas绘画网格化数据</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" ></script>
+	<style>
+		html,body{
+			height: 100%;
+			margin: 0;
+			background-color: #cccccc;
+		}
+		.canvas-block{
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			background-color: transparent;
+		}
+		#canvas{
+			opacity: 0.7;
+		}
+		.canvas-title{
+			display: none;    
+			position: absolute;
+			border-style: solid;
+			white-space: nowrap;
+			z-index: 9999999;
+			transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1), top 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+			background-color: rgba(50, 50, 50, 0.7);
+			border-width: 0px;
+			border-color: rgb(51, 51, 51);
+			border-radius: 4px;
+			color: rgb(255, 255, 255);
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			font-stretch: normal;
+			font-size: 14px;
+			font-family: "Microsoft YaHei";
+			line-height: 21px;
+			padding: 5px;
+		}
+		.canvas-block:hover .canvas-title{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="canvas-block">
+		<canvas id="canvas" width="400" height="400"></canvas>
+		<div class="canvas-title"></div>
+	</div>
+</body>
+<script>
+	// 箱子对象
+	var binObj = {x:20,y:20};
+	// 绘画
+	function binningByCanvas(){
+		var div = $('#canvas');
+		binObj.width = div.width();
+		binObj.height = div.height();
+		var c=div[0];
+		var ctx=c.getContext("2d");
+		var COLORS = ["#070093", "#1c3fbf", "#1482e5", "#70b4eb", "#b4e0f3", "#ffffff"];
+		var random,itemX = binObj.width/binObj.x,itemY = binObj.height/binObj.y;
+		binObj.data = {};
+		for (var i = 0; i < binObj.x; i++) {
+			binObj.data['x'+i] = {};
+			for (var j = 0; j < binObj.y; j++) {
+				random = Math.floor(Math.random()*COLORS.length);
+				binObj.data['x'+i]['y'+j] = random;
+			};
+		};
+		for (var i = 0; i < binObj.x; i++) {
+			for (var j = 0; j < binObj.y; j++) {
+				ctx.fillStyle=COLORS[binObj.data['x'+i]['y'+j]];
+				ctx.fillRect(itemX*i,itemY*j,itemX,itemY);
+			};
+		};
+		var x,y;
+		div.on('mousemove',function(e){
+			var left = event.layerX;
+			var top = event.layerY;
+			var newX = Math.floor(left/itemX);
+			var newY = Math.floor(top/itemY);
+			if (x != newX || y != newY) {
+				for (var i = 0; i < binObj.x; i++) {
+					for (var j = 0; j < binObj.y; j++) {
+						ctx.fillStyle=COLORS[binObj.data['x'+i]['y'+j]];
+						if (newX == i && newY == j) {
+							ctx.fillStyle='yellow';
+						};
+						ctx.fillRect(itemX*i,itemY*j,itemX,itemY);
+					};
+				};
+				x = newX;
+				y = newY;
+			};
+			// console.log(left,top,x,y);
+			var val = binObj.data['x'+x]['y'+y];
+			$('.canvas-block .canvas-title').css({left:left+20,top:top}).html('<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:'+COLORS[val]+';"></span>'+val);
+		})
+		div.on('mouseout',function(){
+			for (var i = 0; i < binObj.x; i++) {
+				for (var j = 0; j < binObj.y; j++) {
+					ctx.fillStyle=COLORS[binObj.data['x'+i]['y'+j]];
+					ctx.fillRect(itemX*i,itemY*j,itemX,itemY);
+				};
+			};
+		})
+	}
+	binningByCanvas();
+</script>
+</html>

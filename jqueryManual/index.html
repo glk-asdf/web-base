@@ -1,0 +1,3286 @@
+<html lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>
+      jQuery Cheat Sheet
+    </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="title" content="jQuery Cheat Sheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="jquery-1.12.0.js"></script>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <h1>
+        <strong>
+          <a href="http://jquery.com/" title="Go to jQuery site">
+            jQuery
+          </a>
+        </strong>
+        Quick API Reference
+      </h1>
+      <div class="filter-group">
+        <div class="filter filter-version">
+          <select id="version" data-placeholder="Version..." tabindex="-1" class="selectized"
+          style="display: none;">
+            <option value="1.10" selected="selected">
+              1.10 / 2.0
+            </option>
+          </select>
+          <div class="selectize-control single">
+            <div class="selectize-input items full has-options has-items">
+              <div data-value="1.10" class="item">
+                1.10 / 2.0
+              </div>
+              <input type="text" autocomplete="off" tabindex="" style="width: 4px; opacity: 0; position: absolute; left: -10000px;">
+            </div>
+            <div class="selectize-dropdown single" style="display: none; width: 101px; top: 34px; left: 0px; visibility: visible;">
+              <div class="selectize-dropdown-content">
+                <div data-value="1.10" data-selectable="" class="option selected">
+                  1.10 / 2.0
+                </div>
+                <div data-value="1.9" data-selectable="" class="option">
+                  1.9
+                </div>
+                <div data-value="1.8" data-selectable="" class="option">
+                  1.8
+                </div>
+                <div data-value="1.7" data-selectable="" class="option">
+                  1.7
+                </div>
+                <div data-value="1.6" data-selectable="" class="option">
+                  1.6
+                </div>
+                <div data-value="1.5" data-selectable="" class="option">
+                  1.5
+                </div>
+                <div data-value="1.4.4" data-selectable="" class="option">
+                  1.4.4
+                </div>
+                <div data-value="1.4.3" data-selectable="" class="option">
+                  1.4.3
+                </div>
+                <div data-value="1.4.2" data-selectable="" class="option">
+                  1.4.2
+                </div>
+                <div data-value="1.4.1" data-selectable="" class="option">
+                  1.4.1
+                </div>
+                <div data-value="1.4" data-selectable="" class="option">
+                  1.4
+                </div>
+                <div data-value="1.3" data-selectable="" class="option">
+                  1.3
+                </div>
+                <div data-value="1.2.6" data-selectable="" class="option">
+                  1.2.6
+                </div>
+                <div data-value="1.2.3" data-selectable="" class="option">
+                  1.2.3
+                </div>
+                <div data-value="1.2" data-selectable="" class="option">
+                  1.2
+                </div>
+                <div data-value="1.1.3" data-selectable="" class="option">
+                  1.1.3
+                </div>
+                <div data-value="1.1.2" data-selectable="" class="option">
+                  1.1.2
+                </div>
+                <div data-value="1.1" data-selectable="" class="option">
+                  1.1
+                </div>
+                <div data-value="1.0.4" data-selectable="" class="option">
+                  1.0.4
+                </div>
+                <div data-value="1.0" data-selectable="" class="option">
+                  1.0
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter filter-search">
+          <select id="search" placeholder="Search..." tabindex="-1" class="selectized"
+          style="display: none;">
+            <option value="" selected="selected">
+            </option>
+          </select>
+          <div class="selectize-control single">
+            <div class="selectize-input items not-full has-options">
+              <input type="text" autocomplete="off" tabindex="" placeholder="Search..."
+              style="width: 54px; opacity: 1; position: relative; left: 0px;">
+            </div>
+            <div class="selectize-dropdown single" style="display: none; width: 377px; top: 34px; left: 0px; visibility: visible;">
+              <div class="selectize-dropdown-content">
+                <div data-value="all-selector" data-selectable="" class="option v1-0 selectors">
+                  *
+                </div>
+                <div data-value="add" data-selectable="" class="option v1-0 traversing">
+                  .add()
+                </div>
+                <div data-value="addBack" data-selectable="" class="option v1-8 traversing">
+                  .addBack()
+                </div>
+                <div data-value="addClass" data-selectable="" class="option v1-0 attributes">
+                  .addClass()
+                </div>
+                <div data-value="after" data-selectable="" class="option v1-0 manipulation">
+                  .after()
+                </div>
+                <div data-value="ajaxComplete" data-selectable="" class="option v1-0 ajax">
+                  .ajaxComplete()
+                </div>
+                <div data-value="ajaxError" data-selectable="" class="option v1-0 ajax">
+                  .ajaxError()
+                </div>
+                <div data-value="ajaxSend" data-selectable="" class="option v1-0 ajax">
+                  .ajaxSend()
+                </div>
+                <div data-value="ajaxStart" data-selectable="" class="option v1-0 ajax">
+                  .ajaxStart()
+                </div>
+                <div data-value="ajaxStop" data-selectable="" class="option v1-0 ajax">
+                  .ajaxStop()
+                </div>
+                <div data-value="ajaxSuccess" data-selectable="" class="option v1-0 ajax">
+                  .ajaxSuccess()
+                </div>
+                <div data-value="descendant-selector" data-selectable="" class="option v1-0 selectors">
+                  ancestor descendant
+                </div>
+                <div data-value="andSelf" data-selectable="" class="option v1-2 traversing v1-8-d">
+                  .andSelf()
+                </div>
+                <div data-value="animate" data-selectable="" class="option v1-0 effects">
+                  .animate()
+                </div>
+                <div data-value="animated-selector" data-selectable="" class="option v1-2 selectors">
+                  :animated
+                </div>
+                <div data-value="append" data-selectable="" class="option v1-0 manipulation">
+                  .append()
+                </div>
+                <div data-value="appendTo" data-selectable="" class="option v1-0 manipulation">
+                  .appendTo()
+                </div>
+                <div data-value="attr" data-selectable="" class="option v1-0 attributes">
+                  .attr()
+                </div>
+                <div data-value="before" data-selectable="" class="option v1-0 manipulation">
+                  .before()
+                </div>
+                <div data-value="bind" data-selectable="" class="option v1-0 events">
+                  .bind()
+                </div>
+                <div data-value="blur" data-selectable="" class="option v1-0 events">
+                  .blur()
+                </div>
+                <div data-value="button-selector" data-selectable="" class="option v1-0 selectors">
+                  :button
+                </div>
+                <div data-value="callbacks.add" data-selectable="" class="option v1-7 core">
+                  callbacks.add()
+                </div>
+                <div data-value="callbacks.disable" data-selectable="" class="option v1-7 core">
+                  callbacks.disable()
+                </div>
+                <div data-value="callbacks.empty" data-selectable="" class="option v1-7 core">
+                  callbacks.empty()
+                </div>
+                <div data-value="callbacks.fire" data-selectable="" class="option v1-7 core">
+                  callbacks.fire()
+                </div>
+                <div data-value="callbacks.fired" data-selectable="" class="option v1-7 core">
+                  callbacks.fired()
+                </div>
+                <div data-value="callbacks.fireWith" data-selectable="" class="option v1-7 core">
+                  callbacks.fireWith()
+                </div>
+                <div data-value="callbacks.has" data-selectable="" class="option v1-7 core">
+                  callbacks.has()
+                </div>
+                <div data-value="callbacks.lock" data-selectable="" class="option v1-7 core">
+                  callbacks.lock()
+                </div>
+                <div data-value="callbacks.locked" data-selectable="" class="option v1-7 core">
+                  callbacks.locked()
+                </div>
+                <div data-value="callbacks.remove" data-selectable="" class="option v1-7 core">
+                  callbacks.remove()
+                </div>
+                <div data-value="change" data-selectable="" class="option v1-0 events">
+                  .change()
+                </div>
+                <div data-value="checkbox-selector" data-selectable="" class="option v1-0 selectors">
+                  :checkbox
+                </div>
+                <div data-value="checked-selector" data-selectable="" class="option v1-0 selectors">
+                  :checked
+                </div>
+                <div data-value="children" data-selectable="" class="option v1-0 traversing">
+                  .children()
+                </div>
+                <div data-value="class-selector" data-selectable="" class="option v1-0 selectors">
+                  .class
+                </div>
+                <div data-value="clearQueue" data-selectable="" class="option v1-4 effects">
+                  .clearQueue()
+                </div>
+                <div data-value="click" data-selectable="" class="option v1-0 events">
+                  .click()
+                </div>
+                <div data-value="clone" data-selectable="" class="option v1-0 manipulation">
+                  .clone()
+                </div>
+                <div data-value="closest" data-selectable="" class="option v1-3 traversing">
+                  .closest()
+                </div>
+                <div data-value="contains-selector" data-selectable="" class="option v1-1-4 selectors">
+                  :contains()
+                </div>
+                <div data-value="contents" data-selectable="" class="option v1-2 traversing">
+                  .contents()
+                </div>
+                <div data-value="context" data-selectable="" class="option v1-3 core v1-10-d">
+                  .context
+                </div>
+                <div data-value="css" data-selectable="" class="option v1-0 attributes">
+                  .css()
+                </div>
+                <div data-value="data" data-selectable="" class="option v1-2-3 attributes">
+                  .data()
+                </div>
+                <div data-value="dblclick" data-selectable="" class="option v1-0 events">
+                  .dblclick()
+                </div>
+                <div data-value="deferred.always" data-selectable="" class="option v1-6 core">
+                  deferred.always()
+                </div>
+                <div data-value="deferred.done" data-selectable="" class="option v1-5 core">
+                  deferred.done()
+                </div>
+                <div data-value="deferred.fail" data-selectable="" class="option v1-5 core">
+                  deferred.fail()
+                </div>
+                <div data-value="deferred.isRejected" data-selectable="" class="option v1-5 core v1-7-d v1-8-r">
+                  deferred.isRejected()
+                </div>
+                <div data-value="deferred.isResolved" data-selectable="" class="option v1-5 core v1-7-d v1-8-r">
+                  deferred.isResolved()
+                </div>
+                <div data-value="deferred.notify" data-selectable="" class="option v1-7 core">
+                  deferred.notify()
+                </div>
+                <div data-value="deferred.notifyWith" data-selectable="" class="option v1-7 core">
+                  deferred.notifyWith()
+                </div>
+                <div data-value="deferred.pipe" data-selectable="" class="option v1-6 core v1-8-d">
+                  deferred.pipe()
+                </div>
+                <div data-value="deferred.progress" data-selectable="" class="option v1-7 core">
+                  deferred.progress()
+                </div>
+                <div data-value="deferred.promise" data-selectable="" class="option v1-5 core">
+                  deferred.promise()
+                </div>
+                <div data-value="deferred.reject" data-selectable="" class="option v1-5 core">
+                  deferred.reject()
+                </div>
+                <div data-value="deferred.rejectWith" data-selectable="" class="option v1-5 core">
+                  deferred.rejectWith()
+                </div>
+                <div data-value="deferred.resolve" data-selectable="" class="option v1-5 core">
+                  deferred.resolve()
+                </div>
+                <div data-value="deferred.resolveWith" data-selectable="" class="option v1-5 core">
+                  deferred.resolveWith()
+                </div>
+                <div data-value="deferred.state" data-selectable="" class="option v1-7 core">
+                  deferred.state()
+                </div>
+                <div data-value="deferred.then" data-selectable="" class="option v1-5 core">
+                  deferred.then()
+                </div>
+                <div data-value="delay" data-selectable="" class="option v1-4 effects">
+                  .delay()
+                </div>
+                <div data-value="delegate" data-selectable="" class="option v1-4-2 events">
+                  .delegate()
+                </div>
+                <div data-value="dequeue" data-selectable="" class="option v1-2 effects">
+                  .dequeue()
+                </div>
+                <div data-value="detach" data-selectable="" class="option v1-4 manipulation">
+                  .detach()
+                </div>
+                <div data-value="die" data-selectable="" class="option v1-3 events v1-7-d v1-9-r">
+                  .die()
+                </div>
+                <div data-value="disabled-selector" data-selectable="" class="option v1-0 selectors">
+                  :disabled
+                </div>
+                <div data-value="each" data-selectable="" class="option v1-0 traversing">
+                  .each()
+                </div>
+                <div data-value="element-selector" data-selectable="" class="option v1-0 selectors">
+                  element
+                </div>
+                <div data-value="empty" data-selectable="" class="option v1-0 manipulation">
+                  .empty()
+                </div>
+                <div data-value="empty-selector" data-selectable="" class="option v1-0 selectors">
+                  :empty
+                </div>
+                <div data-value="enabled-selector" data-selectable="" class="option v1-0 selectors">
+                  :enabled
+                </div>
+                <div data-value="end" data-selectable="" class="option v1-0 traversing">
+                  .end()
+                </div>
+                <div data-value="eq" data-selectable="" class="option v1-1-2 traversing">
+                  .eq()
+                </div>
+                <div data-value="eq-selector" data-selectable="" class="option v1-0 selectors">
+                  :eq()
+                </div>
+                <div data-value="error" data-selectable="" class="option v1-0 events v1-8-d">
+                  .error()
+                </div>
+                <div data-value="even-selector" data-selectable="" class="option v1-0 selectors">
+                  :even
+                </div>
+                <div data-value="event.currentTarget" data-selectable="" class="option v1-3 events">
+                  event.currentTarget
+                </div>
+                <div data-value="event.data" data-selectable="" class="option v1-1 events">
+                  event.data
+                </div>
+                <div data-value="event.isDefaultPrevented" data-selectable="" class="option v1-3 events">
+                  event.isDefaultPrevented()
+                </div>
+                <div data-value="event.isImmediatePropagationStopped" data-selectable=""
+                class="option v1-3 events">
+                  event.isImmediatePropagationStopped()
+                </div>
+                <div data-value="event.isPropagationStopped" data-selectable="" class="option v1-3 events">
+                  event.isPropagationStopped()
+                </div>
+                <div data-value="event.namespace" data-selectable="" class="option v1-4-3 events">
+                  event.namespace
+                </div>
+                <div data-value="event.pageX" data-selectable="" class="option v1-0-4 events">
+                  event.pageX
+                </div>
+                <div data-value="event.pageY" data-selectable="" class="option v1-0-4 events">
+                  event.pageY
+                </div>
+                <div data-value="event.preventDefault" data-selectable="" class="option v1-0 events">
+                  event.preventDefault()
+                </div>
+                <div data-value="event.relatedTarget" data-selectable="" class="option v1-1-4 events">
+                  event.relatedTarget
+                </div>
+                <div data-value="event.result" data-selectable="" class="option v1-3 events">
+                  event.result
+                </div>
+                <div data-value="event.stopImmediatePropagation" data-selectable="" class="option v1-3 events">
+                  event.stopImmediatePropagation()
+                </div>
+                <div data-value="event.stopPropagation" data-selectable="" class="option v1-0 events">
+                  event.stopPropagation()
+                </div>
+                <div data-value="event.target" data-selectable="" class="option v1-0 events">
+                  event.target
+                </div>
+                <div data-value="event.timeStamp" data-selectable="" class="option v1-2-6 events">
+                  event.timeStamp
+                </div>
+                <div data-value="event.type" data-selectable="" class="option v1-0 events">
+                  event.type
+                </div>
+                <div data-value="event.which" data-selectable="" class="option v1-1-3 events">
+                  event.which
+                </div>
+                <div data-value="fadeIn" data-selectable="" class="option v1-0 effects">
+                  .fadeIn()
+                </div>
+                <div data-value="fadeOut" data-selectable="" class="option v1-0 effects">
+                  .fadeOut()
+                </div>
+                <div data-value="fadeTo" data-selectable="" class="option v1-0 effects">
+                  .fadeTo()
+                </div>
+                <div data-value="fadeToggle" data-selectable="" class="option v1-4-4 effects">
+                  .fadeToggle()
+                </div>
+                <div data-value="file-selector" data-selectable="" class="option v1-0 selectors">
+                  :file
+                </div>
+                <div data-value="filter" data-selectable="" class="option v1-0 traversing">
+                  .filter()
+                </div>
+                <div data-value="find" data-selectable="" class="option v1-0 traversing">
+                  .find()
+                </div>
+                <div data-value="finish" data-selectable="" class="option v1-9 effects">
+                  .finish()
+                </div>
+                <div data-value="first" data-selectable="" class="option v1-4 traversing">
+                  .first()
+                </div>
+                <div data-value="first-selector" data-selectable="" class="option v1-0 selectors">
+                  :first
+                </div>
+                <div data-value="first-child-selector" data-selectable="" class="option v1-1-4 selectors">
+                  :first-child
+                </div>
+                <div data-value="first-of-type-selector" data-selectable="" class="option v1-9 selectors">
+                  :first-of-type
+                </div>
+                <div data-value="focus" data-selectable="" class="option v1-0 events">
+                  .focus()
+                </div>
+                <div data-value="focus-selector" data-selectable="" class="option v1-6 selectors">
+                  :focus
+                </div>
+                <div data-value="focusin" data-selectable="" class="option v1-4 events">
+                  .focusin()
+                </div>
+                <div data-value="focusout" data-selectable="" class="option v1-4 events">
+                  .focusout()
+                </div>
+                <div data-value="get" data-selectable="" class="option v1-0 core">
+                  .get()
+                </div>
+                <div data-value="gt-selector" data-selectable="" class="option v1-0 selectors">
+                  :gt()
+                </div>
+                <div data-value="has-selector" data-selectable="" class="option v1-1-4 selectors">
+                  :has()
+                </div>
+                <div data-value="has" data-selectable="" class="option v1-4 traversing">
+                  .has()
+                </div>
+                <div data-value="hasClass" data-selectable="" class="option v1-2 attributes">
+                  .hasClass()
+                </div>
+                <div data-value="header-selector" data-selectable="" class="option v1-2 selectors">
+                  :header
+                </div>
+                <div data-value="height" data-selectable="" class="option v1-0 attributes">
+                  .height()
+                </div>
+                <div data-value="hidden-selector" data-selectable="" class="option v1-0 selectors">
+                  :hidden
+                </div>
+                <div data-value="hide" data-selectable="" class="option v1-0 effects">
+                  .hide()
+                </div>
+                <div data-value="jQuery.holdReady" data-selectable="" class="option v1-6 events">
+                  .holdReady()
+                </div>
+                <div data-value="hover" data-selectable="" class="option v1-0 events">
+                  .hover()
+                </div>
+                <div data-value="html" data-selectable="" class="option v1-0 manipulation">
+                  .html()
+                </div>
+                <div data-value="id-selector" data-selectable="" class="option v1-0 selectors">
+                  #id
+                </div>
+                <div data-value="image-selector" data-selectable="" class="option v1-0 selectors">
+                  :image
+                </div>
+                <div data-value="index" data-selectable="" class="option v1-0 core">
+                  .index()
+                </div>
+                <div data-value="innerHeight" data-selectable="" class="option v1-2-6 attributes">
+                  .innerHeight()
+                </div>
+                <div data-value="innerWidth" data-selectable="" class="option v1-2-6 attributes">
+                  .innerWidth()
+                </div>
+                <div data-value="input-selector" data-selectable="" class="option v1-0 selectors">
+                  :input
+                </div>
+                <div data-value="insertAfter" data-selectable="" class="option v1-0 manipulation">
+                  .insertAfter()
+                </div>
+                <div data-value="insertBefore" data-selectable="" class="option v1-0 manipulation">
+                  .insertBefore()
+                </div>
+                <div data-value="is" data-selectable="" class="option v1-0 traversing">
+                  .is()
+                </div>
+                <div data-value="jquery-2" data-selectable="" class="option v1-0 core">
+                  .jquery
+                </div>
+                <div data-value="jQuery" data-selectable="" class="option v1-0 core">
+                  jQuery()
+                </div>
+                <div data-value="jQuery.ajax" data-selectable="" class="option v1-0 ajax">
+                  jQuery.ajax()
+                </div>
+                <div data-value="jQuery.ajaxSetup" data-selectable="" class="option v1-1 ajax">
+                  jQuery.ajaxSetup()
+                </div>
+                <div data-value="jQuery.boxModel" data-selectable="" class="option v1-0 core v1-3-d v1-8-r">
+                  jQuery.boxModel
+                </div>
+                <div data-value="jQuery.browser" data-selectable="" class="option v1-0 core v1-3-d v1-9-r">
+                  jQuery.browser
+                </div>
+                <div data-value="jQuery.Callbacks" data-selectable="" class="option v1-7 core">
+                  jQuery.Callbacks()
+                </div>
+                <div data-value="jQuery.contains" data-selectable="" class="option v1-4 core">
+                  jQuery.contains()
+                </div>
+                <div data-value="jQuery.cssHooks" data-selectable="" class="option v1-4-3 attributes">
+                  jQuery.cssHooks
+                </div>
+                <div data-value="jQuery.data" data-selectable="" class="option v1-2-3 attributes">
+                  jQuery.data()
+                </div>
+                <div data-value="jQuery.dequeue" data-selectable="" class="option v1-3 effects">
+                  jQuery.dequeue()
+                </div>
+                <div data-value="jQuery.each" data-selectable="" class="option v1-0 core">
+                  jQuery.each()
+                </div>
+                <div data-value="jQuery.error" data-selectable="" class="option v1-4-1 core">
+                  jQuery.error()
+                </div>
+                <div data-value="jQuery.extend" data-selectable="" class="option v1-0 core">
+                  jQuery.extend()
+                </div>
+                <div data-value="jQuery.fx.interval" data-selectable="" class="option v1-4-3 effects">
+                  jQuery.fx.interval
+                </div>
+                <div data-value="jQuery.fx.off" data-selectable="" class="option v1-3 effects">
+                  jQuery.fx.off
+                </div>
+                <div data-value="jQuery.get" data-selectable="" class="option v1-0 ajax">
+                  jQuery.get()
+                </div>
+                <div data-value="jQuery.getJSON" data-selectable="" class="option v1-0 ajax">
+                  jQuery.getJSON()
+                </div>
+                <div data-value="jQuery.getScript" data-selectable="" class="option v1-0 ajax">
+                  jQuery.getScript()
+                </div>
+                <div data-value="jQuery.globalEval" data-selectable="" class="option v1-0-4 core">
+                  jQuery.globalEval()
+                </div>
+                <div data-value="jQuery.grep" data-selectable="" class="option v1-0 core">
+                  jQuery.grep()
+                </div>
+                <div data-value="jQuery.hasData" data-selectable="" class="option v1-5 attributes">
+                  jQuery.hasData()
+                </div>
+                <div data-value="jQuery.inArray" data-selectable="" class="option v1-2 core">
+                  jQuery.inArray()
+                </div>
+                <div data-value="jQuery.isArray" data-selectable="" class="option v1-3 core">
+                  jQuery.isArray()
+                </div>
+                <div data-value="jQuery.isEmptyObject" data-selectable="" class="option v1-4 core">
+                  jQuery.isEmptyObject()
+                </div>
+                <div data-value="jQuery.isFunction" data-selectable="" class="option v1-2 core">
+                  jQuery.isFunction()
+                </div>
+                <div data-value="jQuery.isNumeric" data-selectable="" class="option v1-7 core">
+                  jQuery.isNumeric()
+                </div>
+                <div data-value="jQuery.isPlainObject" data-selectable="" class="option v1-4 core">
+                  jQuery.isPlainObject()
+                </div>
+                <div data-value="jQuery.isWindow" data-selectable="" class="option v1-4-3 core">
+                  jQuery.isWindow()
+                </div>
+                <div data-value="jQuery.isXMLDoc" data-selectable="" class="option v1-1-4 core">
+                  jQuery.isXMLDoc()
+                </div>
+                <div data-value="jQuery.makeArray" data-selectable="" class="option v1-2 core">
+                  jQuery.makeArray()
+                </div>
+                <div data-value="jQuery.map" data-selectable="" class="option v1-0 core">
+                  jQuery.map()
+                </div>
+                <div data-value="jQuery.merge" data-selectable="" class="option v1-0 core">
+                  jQuery.merge()
+                </div>
+                <div data-value="jQuery.noConflict" data-selectable="" class="option v1-0 core">
+                  jQuery.noConflict()
+                </div>
+                <div data-value="jQuery.noop" data-selectable="" class="option v1-4 core">
+                  jQuery.noop()
+                </div>
+                <div data-value="jQuery.now" data-selectable="" class="option v1-4-3 core">
+                  jQuery.now()
+                </div>
+                <div data-value="jQuery.param" data-selectable="" class="option v1-2 ajax">
+                  jQuery.param()
+                </div>
+                <div data-value="jQuery.parseHTML" data-selectable="" class="option v1-8 core">
+                  jQuery.parseHTML()
+                </div>
+                <div data-value="jQuery.parseJSON" data-selectable="" class="option v1-4-1 core">
+                  jQuery.parseJSON()
+                </div>
+                <div data-value="jQuery.parseXML" data-selectable="" class="option v1-5 core">
+                  jQuery.parseXML()
+                </div>
+                <div data-value="jQuery.post" data-selectable="" class="option v1-0 ajax">
+                  jQuery.post()
+                </div>
+                <div data-value="jQuery.proxy" data-selectable="" class="option v1-4 core">
+                  jQuery.proxy()
+                </div>
+                <div data-value="jQuery.queue" data-selectable="" class="option v1-3 effects">
+                  jQuery.queue()
+                </div>
+                <div data-value="jQuery.removeData" data-selectable="" class="option v1-2-3 attributes">
+                  jQuery.removeData()
+                </div>
+                <div data-value="jQuery.sub" data-selectable="" class="option v1-5 core v1-7-d v1-9-r">
+                  jQuery.sub()
+                </div>
+                <div data-value="jQuery.support" data-selectable="" class="option v1-3 core v1-9-d">
+                  jQuery.support
+                </div>
+                <div data-value="jQuery.trim" data-selectable="" class="option v1-0 core">
+                  jQuery.trim()
+                </div>
+                <div data-value="jQuery.type" data-selectable="" class="option v1-4-3 core">
+                  jQuery.type()
+                </div>
+                <div data-value="jQuery.unique" data-selectable="" class="option v1-1-3 core">
+                  jQuery.unique()
+                </div>
+                <div data-value="jQuery.when" data-selectable="" class="option v1-5 core">
+                  jQuery.when()
+                </div>
+                <div data-value="keydown" data-selectable="" class="option v1-0 events">
+                  .keydown()
+                </div>
+                <div data-value="keypress" data-selectable="" class="option v1-0 events">
+                  .keypress()
+                </div>
+                <div data-value="keyup" data-selectable="" class="option v1-0 events">
+                  .keyup()
+                </div>
+                <div data-value="lang-selector" data-selectable="" class="option v1-9 selectors">
+                  :lang()
+                </div>
+                <div data-value="last" data-selectable="" class="option v1-4 traversing">
+                  .last()
+                </div>
+                <div data-value="last-selector" data-selectable="" class="option v1-0 selectors">
+                  :last
+                </div>
+                <div data-value="last-child-selector" data-selectable="" class="option v1-1-4 selectors">
+                  :last-child
+                </div>
+                <div data-value="last-of-type-selector" data-selectable="" class="option v1-9 selectors">
+                  :last-of-type
+                </div>
+                <div data-value="length" data-selectable="" class="option v1-0 core">
+                  .length
+                </div>
+                <div data-value="live" data-selectable="" class="option v1-3 events v1-7-d v1-9-r">
+                  .live()
+                </div>
+                <div data-value="load-event" data-selectable="" class="option v1-0 events v1-8-d">
+                  .load()
+                </div>
+                <div data-value="load" data-selectable="" class="option v1-0 ajax">
+                  .load()
+                </div>
+                <div data-value="lt-selector" data-selectable="" class="option v1-0 selectors">
+                  :lt()
+                </div>
+                <div data-value="map" data-selectable="" class="option v1-2 traversing">
+                  .map()
+                </div>
+                <div data-value="mousedown" data-selectable="" class="option v1-0 events">
+                  .mousedown()
+                </div>
+                <div data-value="mouseenter" data-selectable="" class="option v1-0 events">
+                  .mouseenter()
+                </div>
+                <div data-value="mouseleave" data-selectable="" class="option v1-0 events">
+                  .mouseleave()
+                </div>
+                <div data-value="mousemove" data-selectable="" class="option v1-0 events">
+                  .mousemove()
+                </div>
+                <div data-value="mouseout" data-selectable="" class="option v1-0 events">
+                  .mouseout()
+                </div>
+                <div data-value="mouseover" data-selectable="" class="option v1-0 events">
+                  .mouseover()
+                </div>
+                <div data-value="mouseup" data-selectable="" class="option v1-0 events">
+                  .mouseup()
+                </div>
+                <div data-value="has-attribute-selector" data-selectable="" class="option v1-0 selectors">
+                  [name]
+                </div>
+                <div data-value="attribute-contains-word-selector" data-selectable=""
+                class="option v1-0 selectors">
+                  [name~="value"]
+                </div>
+                <div data-value="attribute-contains-selector" data-selectable="" class="option v1-0 selectors">
+                  [name*="value"]
+                </div>
+                <div data-value="attribute-contains-prefix-selector" data-selectable=""
+                class="option v1-0 selectors">
+                  [name|="value"]
+                </div>
+                <div data-value="attribute-not-equal-selector" data-selectable="" class="option v1-0 selectors">
+                  [name!="value"]
+                </div>
+                <div data-value="attribute-ends-with-selector" data-selectable="" class="option v1-0 selectors">
+                  [name$="value"]
+                </div>
+                <div data-value="attribute-equals-selector" data-selectable="" class="option v1-0 selectors">
+                  [name="value"]
+                </div>
+                <div data-value="attribute-starts-with-selector" data-selectable="" class="option v1-0 selectors">
+                  [name^="value"]
+                </div>
+                <div data-value="multiple-attribute-selector" data-selectable="" class="option v1-0 selectors">
+                  [name="value"][name2="value2"]
+                </div>
+                <div data-value="next" data-selectable="" class="option v1-0 traversing">
+                  .next()
+                </div>
+                <div data-value="nextAll" data-selectable="" class="option v1-2 traversing">
+                  .nextAll()
+                </div>
+                <div data-value="nextUntil" data-selectable="" class="option v1-4 traversing">
+                  .nextUntil()
+                </div>
+                <div data-value="not-selector" data-selectable="" class="option v1-0 selectors">
+                  :not()
+                </div>
+                <div data-value="not" data-selectable="" class="option v1-0 traversing">
+                  .not()
+                </div>
+                <div data-value="nth-child-selector" data-selectable="" class="option v1-1-4 selectors">
+                  :nth-child()
+                </div>
+                <div data-value="nth-last-child-selector" data-selectable="" class="option v1-9 selectors">
+                  :nth-last-child()
+                </div>
+                <div data-value="nth-last-of-type-selector" data-selectable="" class="option v1-9 selectors">
+                  :nth-last-of-type()
+                </div>
+                <div data-value="nth-of-type-selector" data-selectable="" class="option v1-9 selectors">
+                  :nth-of-type()
+                </div>
+                <div data-value="odd-selector" data-selectable="" class="option v1-0 selectors">
+                  :odd
+                </div>
+                <div data-value="off" data-selectable="" class="option v1-7 events">
+                  .off()
+                </div>
+                <div data-value="offset" data-selectable="" class="option v1-2 attributes">
+                  .offset()
+                </div>
+                <div data-value="offsetParent" data-selectable="" class="option v1-2-6 attributes">
+                  .offsetParent()
+                </div>
+                <div data-value="on" data-selectable="" class="option v1-7 events">
+                  .on()
+                </div>
+                <div data-value="one" data-selectable="" class="option v1-1 events">
+                  .one()
+                </div>
+                <div data-value="only-child-selector" data-selectable="" class="option v1-1-4 selectors">
+                  :only-child
+                </div>
+                <div data-value="only-of-type-selector" data-selectable="" class="option v1-9 selectors">
+                  :only-of-type()
+                </div>
+                <div data-value="outerHeight" data-selectable="" class="option v1-2-6 attributes">
+                  .outerHeight()
+                </div>
+                <div data-value="outerWidth" data-selectable="" class="option v1-2-6 attributes">
+                  .outerWidth()
+                </div>
+                <div data-value="parent-selector" data-selectable="" class="option v1-0 selectors">
+                  :parent
+                </div>
+                <div data-value="parent" data-selectable="" class="option v1-0 traversing">
+                  .parent()
+                </div>
+                <div data-value="child-selector" data-selectable="" class="option v1-0 selectors">
+                  parent &gt; child
+                </div>
+                <div data-value="parents" data-selectable="" class="option v1-0 traversing">
+                  .parents()
+                </div>
+                <div data-value="parentsUntil" data-selectable="" class="option v1-4 traversing">
+                  .parentsUntil()
+                </div>
+                <div data-value="password-selector" data-selectable="" class="option v1-0 selectors">
+                  :password
+                </div>
+                <div data-value="position" data-selectable="" class="option v1-2 attributes">
+                  .position()
+                </div>
+                <div data-value="prepend" data-selectable="" class="option v1-0 manipulation">
+                  .prepend()
+                </div>
+                <div data-value="prependTo" data-selectable="" class="option v1-0 manipulation">
+                  .prependTo()
+                </div>
+                <div data-value="prev" data-selectable="" class="option v1-0 traversing">
+                  .prev()
+                </div>
+                <div data-value="prevAll" data-selectable="" class="option v1-2 traversing">
+                  .prevAll()
+                </div>
+                <div data-value="next-adjacent-Selector" data-selectable="" class="option v1-0 selectors">
+                  prev + next
+                </div>
+                <div data-value="next-siblings-selector" data-selectable="" class="option v1-0 selectors">
+                  prev ~ siblings
+                </div>
+                <div data-value="prevUntil" data-selectable="" class="option v1-4 traversing">
+                  .prevUntil()
+                </div>
+                <div data-value="promise" data-selectable="" class="option v1-6 core">
+                  .promise()
+                </div>
+                <div data-value="prop" data-selectable="" class="option v1-6 attributes">
+                  .prop()
+                </div>
+                <div data-value="pushStack" data-selectable="" class="option v1-0 core">
+                  .pushStack()
+                </div>
+                <div data-value="queue" data-selectable="" class="option v1-2 effects">
+                  .queue()
+                </div>
+                <div data-value="radio-selector" data-selectable="" class="option v1-0 selectors">
+                  :radio
+                </div>
+                <div data-value="ready" data-selectable="" class="option v1-0 events">
+                  .ready()
+                </div>
+                <div data-value="remove" data-selectable="" class="option v1-0 manipulation">
+                  .remove()
+                </div>
+                <div data-value="removeAttr" data-selectable="" class="option v1-0 attributes">
+                  .removeAttr()
+                </div>
+                <div data-value="removeClass" data-selectable="" class="option v1-0 attributes">
+                  .removeClass()
+                </div>
+                <div data-value="removeData" data-selectable="" class="option v1-2-3 attributes">
+                  .removeData()
+                </div>
+                <div data-value="removeProp" data-selectable="" class="option v1-6 attributes">
+                  .removeProp()
+                </div>
+                <div data-value="replaceAll" data-selectable="" class="option v1-2 manipulation">
+                  .replaceAll()
+                </div>
+                <div data-value="replaceWith" data-selectable="" class="option v1-2 manipulation">
+                  .replaceWith()
+                </div>
+                <div data-value="reset-selector" data-selectable="" class="option v1-0 selectors">
+                  :reset
+                </div>
+                <div data-value="resize" data-selectable="" class="option v1-0 events">
+                  .resize()
+                </div>
+                <div data-value="root-selector" data-selectable="" class="option v1-9 selectors">
+                  :root
+                </div>
+                <div data-value="scroll" data-selectable="" class="option v1-0 events">
+                  .scroll()
+                </div>
+                <div data-value="scrollLeft" data-selectable="" class="option v1-2-6 attributes">
+                  .scrollLeft()
+                </div>
+                <div data-value="scrollTop" data-selectable="" class="option v1-2-6 attributes">
+                  .scrollTop()
+                </div>
+                <div data-value="select" data-selectable="" class="option v1-0 events">
+                  .select()
+                </div>
+                <div data-value="selected-selector" data-selectable="" class="option v1-0 selectors">
+                  :selected
+                </div>
+                <div data-value="selector" data-selectable="" class="option v1-3 core v1-7-d">
+                  .selector
+                </div>
+                <div data-value="multiple-selector" data-selectable="" class="option v1-0 selectors">
+                  selector1, selectorN, ...
+                </div>
+                <div data-value="serialize" data-selectable="" class="option v1-0 ajax">
+                  .serialize()
+                </div>
+                <div data-value="serializeArray" data-selectable="" class="option v1-2 ajax">
+                  .serializeArray()
+                </div>
+                <div data-value="show" data-selectable="" class="option v1-0 effects">
+                  .show()
+                </div>
+                <div data-value="siblings" data-selectable="" class="option v1-0 traversing">
+                  .siblings()
+                </div>
+                <div data-value="size" data-selectable="" class="option v1-0 core v1-8-d">
+                  .size()
+                </div>
+                <div data-value="slice" data-selectable="" class="option v1-1-4 traversing">
+                  .slice()
+                </div>
+                <div data-value="slideDown" data-selectable="" class="option v1-0 effects">
+                  .slideDown()
+                </div>
+                <div data-value="slideToggle" data-selectable="" class="option v1-0 effects">
+                  .slideToggle()
+                </div>
+                <div data-value="slideUp" data-selectable="" class="option v1-0 effects">
+                  .slideUp()
+                </div>
+                <div data-value="stop" data-selectable="" class="option v1-2 effects">
+                  .stop()
+                </div>
+                <div data-value="submit" data-selectable="" class="option v1-0 events">
+                  .submit()
+                </div>
+                <div data-value="submit-selector" data-selectable="" class="option v1-0 selectors">
+                  :submit
+                </div>
+                <div data-value="target-selector" data-selectable="" class="option v1-9 selectors">
+                  :target
+                </div>
+                <div data-value="text-selector" data-selectable="" class="option v1-0 selectors">
+                  :text
+                </div>
+                <div data-value="text" data-selectable="" class="option v1-0 manipulation">
+                  .text()
+                </div>
+                <div data-value="toArray" data-selectable="" class="option v1-4 core">
+                  .toArray()
+                </div>
+                <div data-value="toggle" data-selectable="" class="option v1-0 effects">
+                  .toggle()
+                </div>
+                <div data-value="toggle-event" data-selectable="" class="option v1-0 events v1-8-d v1-9-r">
+                  .toggle()
+                </div>
+                <div data-value="toggleClass" data-selectable="" class="option v1-0 attributes">
+                  .toggleClass()
+                </div>
+                <div data-value="trigger" data-selectable="" class="option v1-0 events">
+                  .trigger()
+                </div>
+                <div data-value="triggerHandler" data-selectable="" class="option v1-2 events">
+                  .triggerHandler()
+                </div>
+                <div data-value="unbind" data-selectable="" class="option v1-0 events">
+                  .unbind()
+                </div>
+                <div data-value="undelegate" data-selectable="" class="option v1-4-2 events">
+                  .undelegate()
+                </div>
+                <div data-value="unload" data-selectable="" class="option v1-0 events v1-8-d">
+                  .unload()
+                </div>
+                <div data-value="unwrap" data-selectable="" class="option v1-4 manipulation">
+                  .unwrap()
+                </div>
+                <div data-value="val" data-selectable="" class="option v1-0 attributes">
+                  .val()
+                </div>
+                <div data-value="visible-selector" data-selectable="" class="option v1-0 selectors">
+                  :visible
+                </div>
+                <div data-value="width" data-selectable="" class="option v1-0 attributes">
+                  .width()
+                </div>
+                <div data-value="wrap" data-selectable="" class="option v1-0 manipulation">
+                  .wrap()
+                </div>
+                <div data-value="wrapAll" data-selectable="" class="option v1-2 manipulation">
+                  .wrapAll()
+                </div>
+                <div data-value="wrapInner" data-selectable="" class="option v1-2 manipulation">
+                  .wrapInner()
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="about" href="#about" id="about-link">
+        About...
+      </a>
+    </header>
+    <div class="main-content">
+      <article id="selectors" class="selectors">
+        <h1>
+          Selectors 选择器
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                Basics 基本
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 all-selector" title="所有元素 $('*')" href="https://api.jquery.com/all-selector/"
+                  data-src="">
+                    *
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 class-selector" title="类名选择区 $('.asd')"
+                  href="https://api.jquery.com/class-selector/" data-src="">
+                    .class
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 element-selector" title="标签名选择器 $('div')"
+                  href="https://api.jquery.com/element-selector/" data-src="">
+                    element
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 id-selector" title="ID选择器 $('#dfg')只匹配第一个"
+                  href="https://api.jquery.com/id-selector/" data-src="">
+                    #id 
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 multiple-selector" title="群组选择器 $('div,span,.asd')"
+                  href="https://api.jquery.com/multiple-selector/" data-src="">
+                    'selector1, selectorN, ...'
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 multiple-selector" title="在第二个选择器下搜寻第一个选择器内容 $('div','.asd')"
+                  href="https://api.jquery.com/multiple-selector/" data-src="">
+                    'selector1', 'selector2'
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 id-selector" title=" $($('div')) 和 $('div') 一样"
+                  href="https://api.jquery.com/id-selector/" data-src="">
+                    jquery对象 
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Hierarchy 层级
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 child-selector" title="直接子元素 $('div > span')或.find('>span')拥有this属性的方法可以使用"
+                  href="https://api.jquery.com/child-selector/" data-src="">
+                    parent &gt; child
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 descendant-selector" title="后代选择器 $('div span')"
+                  href="https://api.jquery.com/descendant-selector/" data-src="">
+                    ancestor descendant
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 next-adjacent-Selector" title="相邻下一个符合选择器的元素 $('div + span')或.find('+span')"
+                  href="https://api.jquery.com/next-adjacent-Selector/" data-src="">
+                    prev + next
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 next-siblings-selector" title="后面所有符合选择器的元素 $('div ~ span')或.find('~span')"
+                  href="https://api.jquery.com/next-siblings-selector/" data-src="">
+                    prev ~ siblings
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Basic Filters 基本过滤器
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-2 animated-selector" title="正在进行动画的元素 $(':animated')(不加前面的选择器的默认为*)"
+                  href="https://api.jquery.com/animated-selector/" data-src="">
+                    :animated
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 eq-selector" title="下标为...的元素 $(':eq(0)')"
+                  href="https://api.jquery.com/eq-selector/" data-src="">
+                    :eq()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 even-selector" title="偶数，从零开始 $(':even')"
+                  href="https://api.jquery.com/even-selector/" data-src="">
+                    :even
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 first-selector" title="第一个元素 $(':first')"
+                  href="https://api.jquery.com/first-selector/" data-src="">
+                    :first
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 gt-selector" title="下标大于...的元素 $(':gt(0)')"
+                  href="https://api.jquery.com/gt-selector/" data-src="">
+                    :gt()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 header-selector" title="h1到h6的标签 $(':header')"
+                  href="https://api.jquery.com/header-selector/" data-src="">
+                    :header
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 lang-selector" title="属性中有lang的元素，以属性值为参数或以属性值加‘-’开头的的字符串为参数（必填参数）多用于<html>表示所用的语言得到lang属性为参数和参数加'-'开头元素和它们的子元素 <html lang='en'> $('div:lang(en)')得到html下的所有div"
+                  href="https://api.jquery.com/lang-selector/" data-src="">
+                    :lang()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 last-selector" title="最后一个元素 $(':last')" data-src="">
+                    :last
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 lt-selector" title="下标小于...的元素 $(':lt(2)')"
+                  href="https://api.jquery.com/lt-selector/" data-src="">
+                    :lt()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 not-selector" title="接受简单选择器，从选中元素中剔除符合规则的 $(':not(div)')"
+                  href="https://api.jquery.com/not-selector/" data-src="">
+                    :not()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 odd-selector" title="奇数 $(':odd')"
+                  href="https://api.jquery.com/odd-selector/" data-src="">
+                    :odd
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 root-selector" title=" 该文档的根元素 多为<html></html> 只能$(':root')不能写$('div:root')之类的"
+                  href="https://api.jquery.com/root-selector/" data-src="">
+                    :root
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 target-selector" title="从URL中获取ID值即hash（URL中从#开始的锚），并根据ID值找到对应的元素,类似于a标签<a href='#name'><a id='name'> $(':target')或$('p:target')"
+                  href="https://api.jquery.com/target-selector/" data-src="">
+                    :target
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Content Filters 内容过滤器
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-1-4 contains-selector" title="所选元素的文本中包含所给参数的所有元素"
+                  href="https://api.jquery.com/contains-selector/" data-src="">
+                    :contains()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 empty-selector" title="没有内容的元素"
+                  href="https://api.jquery.com/empty-selector/" data-src="">
+                    :empty
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-4 has-selector" title="innerHTML中含有(has中选择器对应的元素)的元素"
+                  href="https://api.jquery.com/has-selector/" data-src="">
+                    :has()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 parent-selector" title="选中元素中(包含子元素)的元素"
+                  href="https://api.jquery.com/parent-selector/" data-src="">
+                    :parent
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div>
+            <section>
+              <h2>
+                Visibility Filters 可见性过滤器
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 hidden-selector" title="隐藏的元素（ display=none 或 input 中 type=hidden ）"
+                  href="https://api.jquery.com/hidden-selector/" data-src="">
+                    :hidden
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 visible-selector" title="可见的元素(不是隐藏元素)"
+                  href="https://api.jquery.com/visible-selector/" data-src="">
+                    :visible
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Attribute 属性
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 attribute-contains-prefix-selector" title="xxx属性为value或以value-开头"
+                  href="https://api.jquery.com/attribute-contains-prefix-selector/" data-src="">
+                    [name|="value"]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 attribute-contains-selector" title="xxx属性含有value"
+                  href="https://api.jquery.com/attribute-contains-selector/" data-src="">
+                    [name*="value"]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 attribute-contains-word-selector" title="xxx属性以空格为间隔，含有value"
+                  href="https://api.jquery.com/attribute-contains-word-selector/" data-src="">
+                    [name~="value"]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 attribute-ends-with-selector" title="xxx属性以value结尾"
+                  href="https://api.jquery.com/attribute-ends-with-selector/" data-src="">
+                    [name$="value"]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 attribute-equals-selector" title="xxx属性为value"
+                  href="https://api.jquery.com/attribute-equals-selector/" data-src="">
+                    [name="value"]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 attribute-not-equal-selector" title="xxx属性不为value"
+                  href="https://api.jquery.com/attribute-not-equal-selector/" data-src="">
+                    [name!="value"]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 attribute-starts-with-selector" title="xxx属性以value开头"
+                  href="https://api.jquery.com/attribute-starts-with-selector/" data-src="">
+                    [name^="value"]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 has-attribute-selector" title="含有xxx属性"
+                  href="https://api.jquery.com/has-attribute-selector/" data-src="">
+                    [name]
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 multiple-attribute-selector" title="复合属性选择器，同属满足多个条件"
+                  href="https://api.jquery.com/multiple-attribute-selector/" data-src="">
+                    [name="value"][name2="value2"]
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Child Filters 作为子元素的过滤器
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-1-4 first-child-selector" title="父元素的第一个子元素是自己的情况下保留"
+                  href="https://api.jquery.com/first-child-selector/" data-src="">
+                    :first-child
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 first-of-type-selector" title="父元素的第一个与自己相同标签子元素是自己的情况下保留"
+                  href="https://api.jquery.com/first-of-type-selector/" data-src="">
+                    :first-of-type
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-4 last-child-selector" title="父元素的最后一个子元素是自己的情况下保留"
+                  href="https://api.jquery.com/last-child-selector/" data-src="">
+                    :last-child
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 last-of-type-selector" title="父元素的最后一个与自己相同标签子元素是自己的情况下保留"
+                  href="https://api.jquery.com/last-of-type-selector/" data-src="">
+                    :last-of-type
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-4 nth-child-selector" title="父元素的第几个子元素是自己的情况下保留（从1开始）"
+                  href="https://api.jquery.com/nth-child-selector/" data-src="">
+                    :nth-child()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 nth-last-child-selector" title="父元素的倒数第几个子元素是自己的情况下保留（从1开始）"
+                  href="https://api.jquery.com/nth-last-child-selector/" data-src="">
+                    :nth-last-child()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 nth-last-of-type-selector" title="父元素的倒数第几个与自己相同标签子元素是自己的情况下保留（从1开始）"
+                  href="https://api.jquery.com/nth-last-of-type-selector/" data-src="">
+                    :nth-last-of-type()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 nth-of-type-selector" title="父元素的第几个与自己相同标签子元素是自己的情况下保留（从1开始）"
+                  href="https://api.jquery.com/nth-of-type-selector/" data-src="">
+                    :nth-of-type()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-4 only-child-selector" title="父元素只有一个子元素的情况下保留"
+                  href="https://api.jquery.com/only-child-selector/" data-src="">
+                    :only-child
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 only-of-type-selector" title="父元素只有一个与自己相同标签子元素的情况下保留（后面加不加括号都可以）"
+                  href="https://api.jquery.com/only-of-type-selector/" data-src="">
+                    :only-of-type()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div>
+            <section>
+              <h2>
+                Forms 表单
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 button-selector" title="所有按钮<button></button>和<input type='button'> "
+                  href="https://api.jquery.com/button-selector/" data-src="">
+                    :button
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 checkbox-selector" title="所有<input type='checkbox'>"
+                  href="https://api.jquery.com/checkbox-selector/" data-src="">
+                    :checkbox
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 checked-selector" title="所有被选中的元素，radio单选，checkbox复选框，select下拉框中的option（checked=checked）"
+                  href="https://api.jquery.com/checked-selector/" data-src="">
+                    :checked
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 disabled-selector" title="input，textarea，select，option，中所有disabled=disabled"
+                  href="https://api.jquery.com/disabled-selector/" data-src="">
+                    :disabled
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 enabled-selector" title="所有可用的元素（即没有disabled=disabled）"
+                  href="https://api.jquery.com/enabled-selector/" data-src="">
+                    :enabled
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-6 focus-selector" title="被选中的元素（表单元素都可被选中）（$('*:focus')等同于$(docment.activeElement)）"
+                  href="https://api.jquery.com/focus-selector/" data-src="">
+                    :focus
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 file-selector" title="所有的文件域<input type='file'>"
+                  href="https://api.jquery.com/file-selector/" data-src="">
+                    :file
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 image-selector" title="所有的图像域<input type='image'>(不包括<img>)"
+                  href="https://api.jquery.com/image-selector/" data-src="">
+                    :image
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 input-selector" title="所有的表单元素input, textarea, select和button"
+                  href="https://api.jquery.com/input-selector/" data-src="">
+                    :input
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 password-selector" title="所有的密码框<input type='password'> "
+                  href="https://api.jquery.com/password-selector/" data-src="">
+                    :password
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 radio-selector" title="所有的单选框<input type='radio'>"
+                  href="https://api.jquery.com/radio-selector/" data-src="">
+                    :radio
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 reset-selector" title="所有的重置按钮<input type='reset'>"
+                  href="https://api.jquery.com/reset-selector/" data-src="">
+                    :reset
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 selected-selector" title="所有选中的选项元素<option selected='selected'></opyion>"
+                  href="https://api.jquery.com/selected-selector/" data-src="">
+                    :selected
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 submit-selector" title="所有提交按钮<input type='submit'> "
+                  href="https://api.jquery.com/submit-selector/" data-src="">
+                    :submit
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 text-selector" title="所有文本域<input type='text'> "
+                  href="https://api.jquery.com/text-selector/" data-src="">
+                    :text
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+      <article id="attributes" class="attributes">
+        <h1>
+          Attributes / CSS 属性/层叠样式表
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                Attributes 属性
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 attr" title="用于普通操作 attr('name')获得jQuery集合中第一个元素的属性名对应的属性值（没有则返回undefined） attr({'name1':'val','name2':'val'})批量设置属性 attr('name','val')设置属性 attr('name',function(){return 'val'})设置属性为函数的返回值 （设置属性方法的返回值为对应的jQuery集合）attr(name|properties|key,value|fn)"
+                  href="https://api.jquery.com/attr/" data-src="jQuery.fn.attr">
+                    .attr()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-6 prop" title="与attr（）相似，但用于表单操作"
+                  href="https://api.jquery.com/prop/" data-src="jQuery.fn.prop">
+                    .prop()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 removeAttr" title="删除普通元素属性"
+                  href="https://api.jquery.com/removeAttr/" data-src="jQuery.fn.removeAttr">
+                    .removeAttr()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-6 removeProp" title="删除表单元素属性"
+                  href="https://api.jquery.com/removeProp/" data-src="jQuery.fn.removeProp">
+                    .removeProp()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 val" title="得到第一个元素的值，或设置所有元素的值"
+                  href="https://api.jquery.com/val/" data-src="jQuery.fn.val">
+                    .val()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                CSS 层叠样式表
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 addClass" title="添加类 $('asd dfg')"
+                  href="https://api.jquery.com/addClass/" data-src="jQuery.fn.addClass">
+                    .addClass()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 css" title="获取第一个元素的样式或设置所有的样式，$('color'),$(['color','height']),$('color','#df4567'),$({'color':'#df4567','height':34}),$('color',function(){return '#df4567'})"
+                  href="https://api.jquery.com/css/" data-src="jQuery.fn.css">
+                    .css()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-3 jQuery-cssHooks" title="Provides a way to hook directly into jQuery to override how particular CSS properties are retrieved or set. Amongst other uses, cssHooks can be used to create custom, browser-normalized properties for CSS3 features such as box-shadows and gradients."
+                  href="https://api.jquery.com/jQuery.cssHooks/" data-src="jQuery.cssHooks">
+                    jQuery.cssHooks
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 hasClass" title="所选的元素中，是否有元素含有所给的类名"
+                  href="https://api.jquery.com/hasClass/" data-src="jQuery.fn.hasClass">
+                    .hasClass()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 removeClass" title="删除全部或指定的类 $('asd dfg')"
+                  href="https://api.jquery.com/removeClass/" data-src="jQuery.fn.removeClass">
+                    .removeClass()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 toggleClass" title="类 有删，无加"
+                  href="https://api.jquery.com/toggleClass/" data-src="jQuery.fn.toggleClass">
+                    .toggleClass()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Dimensions 尺寸，规模，大小
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 height" title="内容的高度，所设的或默认的高度" data-src="jQuery.fn.height">
+                    .height()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 innerHeight" title="内高加上下内边距" data-src="jQuery.fn.innerHeight">
+                    .innerHeight()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 innerWidth" title="内宽加左右内边距" data-src="jQuery.fn.innerWidth">
+                    .innerWidth()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 outerHeight" title="(参数为表示是否计算外边距)outerHeight（）内高，上下内边距，上下边框;outerHeight(true)内高，上下边内距，上下边框，上下外边距"
+                  href="https://api.jquery.com/outerHeight/" data-src="jQuery.fn.outerHeight">
+                    .outerHeight()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 outerWidth" title="outerWidth()内宽，左右内边距，左右边框；outerWidth（true）内宽，左右内边距，左右边框，左右外边距"
+                  href="https://api.jquery.com/outerWidth/" data-src="jQuery.fn.outerWidth">
+                    .outerWidth()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 width" title="内宽" data-src="jQuery.fn.width">
+                    .width()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Offset 偏（离中）心的，偏置的
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-2 offset" title="从边框左上角到文档的top left"
+                  href="https://api.jquery.com/offset/" data-src="jQuery.fn.offset">
+                    .offset()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 offsetParent" title="具有定位属性的祖元素"
+                  href="https://api.jquery.com/offsetParent/" data-src="jQuery.fn.offsetParent">
+                    .offsetParent()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 position" title="从边框左上角到具有定位属性的祖元素的边框左上角的top left"
+                  href="https://api.jquery.com/position/" data-src="jQuery.fn.position">
+                    .position()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 scrollLeft" title="获得或设置横向滚动值（可省略“px”）"
+                  href="https://api.jquery.com/scrollLeft/" data-src="jQuery.fn.scrollLeft">
+                    .scrollLeft()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 scrollTop" title="获得或设置纵向滚动值（可省略“px”）"
+                  href="https://api.jquery.com/scrollTop/" data-src="jQuery.fn.scrollTop">
+                    .scrollTop()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Data 数据
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-2-3 jQuery-data" title="1.8已移除 在元素上存放数据，返回dom对象 $.data(element,['key'],['value'])"
+                  href="https://api.jquery.com/jQuery.data/" data-src="jQuery.data">
+                    jQuery.data()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-3 data" title="在元素上存放数据（不会影响原本有的属性data-） $($0).data('asd')在html5中可返回该元素的data-asd的属性值（若有设置的属性值，则返回设好的属性值；没有，则返回data-asd；在没有，则返回undefined）；$($0).data('asd','asdf')给元素设置属性值，返回元素"
+                  href="https://api.jquery.com/data/" data-src="jQuery.fn.data">
+                    .data()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 jQuery-hasData" title="Determine whether an element has any jQuery data associated with it."
+                  href="https://api.jquery.com/jQuery.hasData/" data-src="jQuery.hasData">
+                    jQuery.hasData()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-3 jQuery-removeData" title="Remove a previously-stored piece of data."
+                  href="https://api.jquery.com/jQuery.removeData/" data-src="jQuery.removeData">
+                    jQuery.removeData()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-3 removeData" title="移除data（）定义的值  .removeData()删除所有值；removeData('asd')删除指定的数据；remove(['asd','as','gh'])或removeData('vc jh sdf sdfg')批量删除指定属性"
+                  href="https://api.jquery.com/removeData/" data-src="jQuery.fn.removeData">
+                    .removeData()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+      <article id="manipulation" class="manipulation">
+        <h1>
+          Manipulation 操作，处理，篡改
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                Copying 复制
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 clone" title="克隆元素并返回副本（即复制的元素）clone()只克隆元素；clone(true)克隆元素并克隆事件 参数默认false" data-src="jQuery.fn.clone">
+                    .clone()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                DOM Insertion, Around 嵌入，周围
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 wrap" title="将所有匹配的元素用传入的参数的结构包裹起来（对参数原元素无影响），$('h2').wrap('<div>')或$('h2').wrap($0)(会将内容一起使用相当于append)或$('h2').wrap(function(){...})"
+                  href="https://api.jquery.com/wrap/" data-src="jQuery.fn.wrap">
+                    .wrap()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 wrapAll" title="用一个结构在匹配的第一个元素的位置将所有的匹配元素包裹（对参数原元素无影响）$('h2').wrapAll('<div>')或$('h2').wrapAll($0)(会将内容一起使用相当于append)"
+                  href="https://api.jquery.com/wrapAll/" data-src="jQuery.fn.wrapAll">
+                    .wrapAll()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 wrapInner" title="将所有匹配的元素的内容包括文本节点用传入的参数的结构包裹起来（对参数原元素无影响），$('h2').wrap('<div>')或$('h2').wrap($0)(会将参数内容一起使用相当于对元素的内容包括文本节点append)或$('h2').wrap(function(){...})"
+                  href="https://api.jquery.com/wrapInner/" data-src="jQuery.fn.wrapInner">
+                    .wrapInner()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                DOM Insertion, Inside 嵌入，内部
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 append" title="向每个匹配的元素的内容的最后添加内容 append(选择器或content或function（){}"
+                  href="https://api.jquery.com/append/" data-src="jQuery.fn.append">
+                    .append()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 appendTo" title="将匹配的对象后置到指定的对象中 .appendTo（content）"
+                  href="https://api.jquery.com/appendTo/" data-src="jQuery.fn.appendTo">
+                    .appendTo()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 html" title=".html（）取得第一个匹配的元素的内容或.html('asd'或'<div>asd</div>'或function(){})设置内容" data-src="jQuery.fn.html">
+                    .html()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 prepend" title="向每个匹配的元素前置内容 append(选择器或'<div>'或function（){})"
+                  href="https://api.jquery.com/prepend/" data-src="jQuery.fn.prepend">
+                    .prepend()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 prependTo" title="将匹配的对象前置到指定对象中 .prependTo(content)"
+                  href="https://api.jquery.com/prependTo/" data-src="jQuery.fn.prependTo">
+                    .prependTo()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 text" title=".text()获取所有匹配的元素的内容或.text('asfd'或function(index,text){...})设置内容"
+                  href="https://api.jquery.com/text/" data-src="jQuery.fn.text">
+                    .text()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                DOM Insertion, Outside 嵌入，外部
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 after" title="在每一个匹配的元素后面插入内容 .after(content或function(){})"
+                  href="https://api.jquery.com/after/" data-src="jQuery.fn.after">
+                    .after()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 before" title="在每一个匹配的元素前面插入内容 .before(content或function(){})"
+                  href="https://api.jquery.com/before/" data-src="jQuery.fn.before">
+                    .before()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 insertAfter" title="将匹配的元素插入到指定的元素后面 .insertAfter(content) 反向类都不能使用函数"
+                  href="https://api.jquery.com/insertAfter/" data-src="jQuery.fn.insertAfter">
+                    .insertAfter()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 insertBefore" title="将匹配的元素插入到指定的元素前面 .insertBefore(content) 反向类都不能使用函数"
+                  href="https://api.jquery.com/insertBefore/" data-src="jQuery.fn.insertBefore">
+                    .insertBefore()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                DOM Removal 移动，排除
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-4 detach" title="（只删除UI界面中的元素，不删除事件和附加数据等）.detach()删除所有匹配的元素 .detach('h2')(选择器进行筛选) 删除匹配的元素中筛选后的元素"
+                  href="https://api.jquery.com/detach/" data-src="jQuery.fn.detach">
+                    .detach() 分离，解开，拆开
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 empty" title="删除匹配元素的所有子节点 没有参数"
+                  href="https://api.jquery.com/empty/" data-src="jQuery.fn.empty">
+                    .empty() 空的，无意义的
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 remove" title="（删除UI界面中的元素并删除事件和附加数据等）.remove()删除所有匹配的元素 .remove('h2')(选择器进行筛选) 删除匹配的元素中筛选元素"
+                  href="https://api.jquery.com/remove/" data-src="jQuery.fn.remove">
+                    .remove()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 unwrap" title="删除父元素，返回自己（即如果没有在其他地方专门保存父元素，则父元素被完全删除，类似匿名函数）"
+                  href="https://api.jquery.com/unwrap/" data-src="jQuery.fn.unwrap">
+                    .unwrap()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                DOM Replacement 更换
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-2 replaceAll" title="将所有指定的元素（2 selector）替换成匹配的元素（1）（若匹配的元素在UI界面中，则所有会从原位置删除，在所有的指定元素的位置出现），返回替换后的元素（1）"
+                  href="https://api.jquery.com/replaceAll/" data-src="jQuery.fn.replaceAll">
+                    .replaceAll()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 replaceWith" title="将所有匹配的元素（1）替换成指定的元素（2 content,dom元素）（若指定的元素在UI界面中，则所有会从原位置删除，在所有的匹配元素的位置出现），返回替换后的元素（2）."
+                  href="https://api.jquery.com/replaceWith/" data-src="jQuery.fn.replaceWith">
+                    .replaceWith()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+      <article id="traversing" class="traversing">
+        <h1>
+          Traversing 变形
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                Filtering 过滤
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-1-2 eq" title="获取匹配元素中（正数，从0开始）下标为几的元素（负数，从-1开始）倒数第几个，返回jQuery集合"
+                  href="https://api.jquery.com/eq/" data-src="jQuery.fn.eq">
+                    .eq()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 filter" title="筛选出与指定表达式符合的jQuery元素集合 选择器.filter('')"
+                  href="https://api.jquery.com/filter/" data-src="jQuery.fn.filter">
+                    .filter()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 first" title="获取匹配的第一个元素"
+                  href="https://api.jquery.com/first/" data-src="jQuery.fn.first">
+                    .first()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 has" title="含有...（选择器或dom元素）的元素"
+                  href="https://api.jquery.com/has/" data-src="jQuery.fn.has">
+                    .has()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 is" title="匹配的元素中至少有一个符合所给的表达式（选择器 或jQuery对象 或dom对象 或返回【true或false】的函数）"
+                  href="https://api.jquery.com/is/" data-src="jQuery.fn.is">
+                    .is()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 last" title="获取匹配的最后一个元素"
+                  href="https://api.jquery.com/last/" data-src="jQuery.fn.last">
+                    .last()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 map" title="将数组或类数组转换成其他数组（新数组）"
+                  href="https://api.jquery.com/map/" data-src="jQuery.fn.map">
+                    .map()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 not" title="筛选删除与指定表达式匹配的元素" data-src="jQuery.fn.not">
+                    .not()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-4 slice" title="选取一个下标符合要求的子集 .slice(0)所有 .slice(1,5)下标从1到4（不包含最或一个）slice(1,-1)下表从1到倒数第二个 （0~最后 负最后~-1）"
+                  href="https://api.jquery.com/slice/" data-src="jQuery.fn.slice">
+                    .slice()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Miscellaneous Traversing 混杂的变形 
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 add" title="将指定的元素添加到匹配的jQuery集合中，以节点在文档中的顺序排序（脱离文档的节点被放在最后）"
+                  href="https://api.jquery.com/add/" data-src="jQuery.fn.add">
+                    .add()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 andSelf v1-8-d old-version" title="已弃用 添加作用链上的上一个元素"
+                  href="https://api.jquery.com/andSelf/" data-src="jQuery.fn.andSelf">
+                    .andSelf()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 contents" title="查找匹配元素的所有子节点（包括文本节点）如果是iframe这查找对应文档所有节点"
+                  href="https://api.jquery.com/contents/" data-src="jQuery.fn.contents">
+                    .contents()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 each" title="对匹配的元素做循环处理 function（i，v）{}this为对应的dom元素。返回true跳过当前循环（类似continue），返回false停止循环（类似break）"
+                  href="https://api.jquery.com/each/" data-src="jQuery.fn.each">
+                    .each()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 end" title="返回破坏（变化）之前的jQury集合。这包括在 Traversing 中任何返回一个jQuery对象的函数--'add', 'andSelf', 'children', 'filter', 'find', 'map', 'next', 'nextAll', 'not', 'parent', 'parents', 'prev', 'prevAll', 'siblings' and 'slice'--再加上 Manipulation 中的 'clone'"
+                  href="https://api.jquery.com/end/" data-src="jQuery.fn.end">
+                    .end()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Tree Traversal 树状结构方面的变形
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-8 addBack" title="添加作用链上之前的元素(支持选择器，筛选被添加在内的作用链上之前的元素)"
+                  href="https://api.jquery.com/addBack/" data-src="jQuery.fn.addBack">
+                    .addBack()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 children" title="获取匹配元素的所有子元素（可有参数，选择器，过滤所选元素）"
+                  href="https://api.jquery.com/children/" data-src="jQuery.fn.children">
+                    .children()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 closest" title="从匹配元素开始到祖元素第一个符合指定要求的元素
+                  ，一个匹配元素返回0或1个（参数为选择器，或jQuery集合，或dom元素）"
+                  href="https://api.jquery.com/closest/" data-src="jQuery.fn.closest">
+                    .closest()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 find" title="匹配元素的所有子元素中符合要求的元素（参数为选择器，或jQuery集合，或dom元素）"
+                  href="https://api.jquery.com/find/" data-src="jQuery.fn.find">
+                    .find()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 next" title="获得每一个匹配元素的下一个(或符合指定选择器的)紧邻同辈元素（可有参数，选择器）"
+                  href="https://api.jquery.com/next/" data-src="jQuery.fn.next">
+                    .next()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 nextAll" title="获得每一个匹配元素的后面所有紧邻同辈元素（可有参数，选择器，用于筛选）"
+                  href="https://api.jquery.com/nextAll/" data-src="jQuery.fn.nextAll">
+                    .nextAll()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 nextUntil" title="获得每一个匹配元素的后面所有紧邻同辈元素，直到遇到那个指定的元素，跳至下一个匹配的元素继续寻找（第一个参数为到...停止，第二个元素为对返回的结果进行筛选，可无参数如同nextAll）"
+                  href="https://api.jquery.com/nextUntil/" data-src="jQuery.fn.nextUntil">
+                    .nextUntil()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 parent" title="返回匹配元素的直接父元素"
+                  href="https://api.jquery.com/parent/" data-src="jQuery.fn.parent">
+                    .parent()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 parents" title="从匹配元素的直接父元素开始到祖元素所有符合指定要求的元素
+                  ，一个匹配元素返回0或多个（参数为选择器或无）"
+                  href="https://api.jquery.com/parents/" data-src="jQuery.fn.parents">
+                    .parents()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 parentsUntil" title="获得每一个匹配元素的直接父元素到所有祖辈元素，直到遇到那个指定的元素，跳至下一个匹配的元素继续寻找（第一个参数为到...停止，第二个元素为对返回的结果进行筛选，可无参数如同parents"
+                  href="https://api.jquery.com/parentsUntil/" data-src="jQuery.fn.parentsUntil">
+                    .parentsUntil()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 prev" title="获得每一个匹配元素的上一个(或符合指定选择器的)紧邻同辈元素（可有参数，选择器）"
+                  href="https://api.jquery.com/prev/" data-src="jQuery.fn.prev">
+                    .prev()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 prevAll" title="获得每一个匹配元素的前面所有紧邻同辈元素（可有参数，选择器，用于筛选）"
+                  href="https://api.jquery.com/prevAll/" data-src="jQuery.fn.prevAll">
+                    .prevAll()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 prevUntil" title="获得每一个匹配元素的前面所有紧邻同辈元素，直到遇到那个指定的元素，跳至下一个匹配的元素继续寻找（第一个参数为到...停止，第二个元素为对返回的结果进行筛选，可无参数如同prevAll）"
+                  href="https://api.jquery.com/prevUntil/" data-src="jQuery.fn.prevUntil">
+                    .prevUntil()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 siblings" title="获得每一个匹配元素的所有同辈元素（可有参数，选择器，用于筛选）"
+                  href="https://api.jquery.com/siblings/" data-src="jQuery.fn.siblings">
+                    .siblings()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+      <article id="events" class="events">
+        <h1>
+          Events 事件
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                Browser Events 浏览器事件
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 error v1-8-d old-version" title="当发生错误时，触发红色警告事件 $(window).error([[data],fn])可传入数据供使用"
+                  href="https://api.jquery.com/error/" data-src="jQuery.fn.error">
+                    .error()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 resize" title="当调整浏览器窗口大小时触发， $(window).resize([[data],fn])可传入数据供使用"
+                  href="https://api.jquery.com/resize/" data-src="jQuery.fn.resize">
+                    .resize()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 scroll" title="当用户滚动指定的元素时触发，适用于可滚动的元素和window，scroll([[data],fn])可传入数据供使用"
+                  href="https://api.jquery.com/scroll/" data-src="jQuery.fn.scroll">
+                    .scroll()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Document Loading 文档加载
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-6 jQuery-holdReady" title="暂停或恢复.ready() 事件的执行。参数（必填）为布尔值 指示是否暂停或恢复被请求的ready事件"
+                  href="https://api.jquery.com/jQuery.holdReady/" data-src="jQuery.holdReady">
+                    .holdReady()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 load-event v1-8-d old-version" title="load(url, [data], [callback])载入远程 HTML 文件代码并插入至 DOM 中。默认使用 GET 方式 - 传递附加参数时自动转换为 POST 方式url:待装入 HTML 网页网址。data:发送至服务器的 key/value 数据。在jQuery 1.3中也可以接受一个字符串了。callback:载入成功时回调函数。"
+                  href="https://api.jquery.com/load-event/" data-src="jQuery.fn.load">
+                    .load()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 ready" title="ready(fn)当DOM载入就绪可以查询及操纵时绑定一个要执行的函数，fn要在DOM就绪时执行的函数"
+                  href="https://api.jquery.com/ready/" data-src="jQuery.fn.ready">
+                    .ready()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 unload v1-8-d old-version" title="unload([[data],fn])在当用户离开页面时，会发生 unload 事件。具体来说，当发生以下情况时，会发出 unload 事件：•点击某个离开页面的链接•在地址栏中键入了新的 URL•使用前进或后退按钮•关闭浏览器•重新加载页面"
+                  href="https://api.jquery.com/unload/" data-src="jQuery.fn.unload">
+                    .unload()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Event Handler Attachment 事件处理函数添加
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 bind removed old-version" title="bind(type,[data],fn)为每个匹配元素的特定事件绑定事件处理函数。type:含有一个或多个事件类型的字符串，由空格分隔多个事件。比如'click'或'submit'，还可以是自定义事件名。data:作为event.data属性值传递给事件对象的额外数据对象fn:绑定到每个匹配元素的事件上面的处理函数 false: 将第三个参数设置为false会使默认的动作失效。 "
+                  href="https://api.jquery.com/bind/" data-src="jQuery.fn.bind">
+                    .bind()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-2 delegate removed old-version" title="delegate(selector,[type],[data],fn)指定的元素（属于被选元素的子元素）添加一个或多个事件处理程序，并规定当这些事件发生时运行的函数。使用 delegate() 方法的事件处理程序适用于当前或未来的元素（比如由脚本创建的新元素）。"
+                  href="https://api.jquery.com/delegate/" data-src="jQuery.fn.delegate">
+                    .delegate()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 die v1-7-d v1-9-r removed old-version" title="off(events,[selector],[fn])在选择元素上移除一个或多个事件的事件处理函数。"
+                  href="https://api.jquery.com/die/" data-src="jQuery.fn.die">
+                    .die()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 live v1-7-d v1-9-r removed old-version" title="Attach a handler to the event for all elements which match the current selector, now and in the future."
+                  href="https://api.jquery.com/live/" data-src="jQuery.fn.live">
+                    .live()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 off" title="off(events,[selector],[fn])在选择元素上移除一个或多个事件的事件处理函数。events:一个或多个空格分隔的事件类型和可选的命名空间，或仅仅是命名空间（在事件后添加'.xxx'可使删除时，删掉命名空间对应的事件函数），比如'click', 'keydown.myPlugin', 或者 '.myPlugin'.selector:一个最初传递到.on()事件处理程序附加的选择器。fn:事件处理程序函数以前附加事件上，或特殊值false" href="https://api.jquery.com/off/"
+                  data-src="jQuery.fn.off">
+                    .off()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 on" title="on(events,[selector],[data],fn)events:一个或多个用空格分隔的事件类型和可选的命名空间，如(click)或(keydown.myPlugin)在选择元素上绑定一个或多个事件的事件处理函数on('click mouseenter',fn),on({'click':fn,'mouseenter':fn2})"
+                  href="https://api.jquery.com/on/" data-src="jQuery.fn.on">
+                    .on()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1 one" title="绑定一个只执行一次的事件数理函数one(type,[data],fn)若想阻止冒泡，返回false"
+                  href="https://api.jquery.com/one/" data-src="jQuery.fn.one">
+                    .one()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 trigger" title="触发某个事件。trigger(type,[data])。trigger('click!')（后有！时，不触发含有命名空间的事件函数）$('p').click( function (event, a, b) {  // 一个普通的点击事件时，a和b是undefined类型
+  // 如果用下面的语句触发，那么a指向'foo',而b指向'bar'} ).trigger('click', ['foo', 'bar']);"
+                  href="https://api.jquery.com/trigger/" data-src="jQuery.fn.trigger">
+                    .trigger()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 triggerHandler" title="（不会发生事件冒泡）。只触发jQuery对象集合中第一个元素的事件处理函数,但不会执行浏览器默认动作，也不会产生事件冒泡,这个方法的返回的是事件处理函数的返回值，而不是据有可链性的jQuery对象.如果最开始的jQuery对象集合为空，则这个方法返回 undefined。triggerHandler(type, [data])"
+                  href="https://api.jquery.com/triggerHandler/" data-src="jQuery.fn.triggerHandler">
+                    .triggerHandler()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 unbind removed old-version" title="Remove a previously-attached event handler from the elements."
+                  href="https://api.jquery.com/unbind/" data-src="jQuery.fn.unbind">
+                    .unbind()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-2 undelegate removed old-version" title="Remove a handler from the event for all elements which match the current selector, now or in the future, based upon a specific set of root elements."
+                  href="https://api.jquery.com/undelegate/" data-src="jQuery.fn.undelegate">
+                    .undelegate()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2> 
+                Form Events 表单事件
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 blur" title="当元素失去焦点时触发 blur 事件。这个函数会调用执行绑定到blur事件的所有函数，包括浏览器的默认行为。可以通过返回false来防止触发浏览器的默认行为。blur事件会在元素失去焦点的时候触发，既可以是鼠标行为，也可以是按tab键离开的。blur([[data],fn]) 。blur()触发事件"
+                  href="https://api.jquery.com/blur/" data-src="jQuery.fn.blur">
+                    .blur()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 change" title="当元素的值发生改变时，会发生 change 事件。该事件仅适用于文本域（text field），以及 textarea 和 select 元素。当用于 select 元素时，change 事件会在选择某个选项时发生。当用于 text field 或 text area 时，该事件会在元素失去焦点时发生。change([[data],fn])"
+                  href="https://api.jquery.com/change/" data-src="jQuery.fn.change">
+                    .change()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 focus" title="当元素获得焦点时，触发 focus 事件。可以通过鼠标点击或者键盘上的TAB导航触发。这将触发所有绑定的focus函数，注意，某些对象不支持focus方法。focus([[data],fn])"
+                  href="https://api.jquery.com/focus/" data-src="jQuery.fn.focus">
+                    .focus()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 select" title="当 textarea 或文本类型的 input 元素中的文本被选择时，会发生 select 事件。这个函数会调用执行绑定到select事件的所有函数，包括浏览器的默认行为。可以通过在某个绑定的函数中返回false来防止触发浏览器的默认行为。select([[data],fn])"
+                  href="https://api.jquery.com/select/" data-src="jQuery.fn.select">
+                    .select()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 submit" title="当提交表单时，会发生 submit 事件。该事件只适用于表单元素。submit([[data],fn]) 返回false会阻止提交表单。$('form:first').submit();提交本页的第一个表单"
+                  href="https://api.jquery.com/submit/" data-src="jQuery.fn.submit">
+                    .submit()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Keyboard Events 键盘事件
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 keydown" title="当键盘或按钮被按下时，发生 keydown 事件。注释：如果在文档元素上进行设置，则无论元素是否获得焦点，该事件都会发生。keydown([[data],fn])"
+                  href="https://api.jquery.com/keydown/" data-src="jQuery.fn.keydown">
+                    .keydown()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 keypress" title="（能产生可打印字符的键才能触发）当键盘或按钮被按下时，发生 keypress 事件。keypress 事件与 keydown 事件类似。当按钮被按下时，会发生该事件。它发生在当前获得焦点的元素上。 不过，与 keydown 事件不同，每插入一个字符，就会发生 keypress 事件。注释：如果在文档元素上进行设置，则无论元素是否获得焦点，该事件都会发生。"
+                  href="https://api.jquery.com/keypress/" data-src="jQuery.fn.keypress">
+                    .keypress()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 keyup" title="当按钮被松开时，发生 keyup 事件。它发生在当前获得焦点的元素上。注释：如果在文档元素上进行设置，则无论元素是否获得焦点，该事件都会发生。keyup([[data],fn])"
+                  href="https://api.jquery.com/keyup/" data-src="jQuery.fn.keyup">
+                    .keyup()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div>
+            <section>
+              <h2>
+                Mouse Events 鼠标事件
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 click" title="触发每一个匹配元素的click事件。这个函数会调用执行绑定到click事件的所有函数。click([[data],fn])"
+                  href="https://api.jquery.com/click/" data-src="jQuery.fn.click">
+                    .click()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 dblclick" title="双击事件，如果把 dblclick 和 click 事件应用于同一元素，可能会产生问题。dblclick([[data],fn])"
+                  href="https://api.jquery.com/dblclick/" data-src="jQuery.fn.dblclick">
+                    .dblclick()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 focusin" title="（不会发生事件冒泡）。当元素获得焦点时，触发 focusin 事件。focusin事件跟focus事件区别在于，他可以在父元素上检测子元素获取焦点的情况($('p').focusin(fn))。focusin([data],fn)"
+                  href="https://api.jquery.com/focusin/" data-src="jQuery.fn.focusin">
+                    .focusin()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 focusout" title="（不会发生事件冒泡）。当元素失去焦点时触发 focusout 事件，focusout事件跟blur事件区别在于，他可以在父元素上检测子元素失去焦点的情况（$('p').focusout(fn)）。focusin([data],fn)"
+                  href="https://api.jquery.com/focusout/" data-src="jQuery.fn.focusout">
+                    .focusout()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 hover" title="（不会发生事件冒泡）。当鼠标移动到一个匹配的元素上面时，会触发指定的第一个函数。当鼠标移出这个元素时，会触发指定的第二个函数,hover([over,]out)如果只有一个函数，则移入和移出都触发这一个事件"
+                  href="https://api.jquery.com/hover/" data-src="jQuery.fn.hover">
+                    .hover()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 mousedown" title="鼠标按下时发生的事件，mousedown([[data],fn])"
+                  href="https://api.jquery.com/mousedown/" data-src="jQuery.fn.mousedown">
+                    .mousedown()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 mouseenter" title="（不会发生事件冒泡）。当鼠标指针穿过元素时，会发生 mouseenter 事件。该事件大多数时候会与mouseleave 事件一起使用。与 mouseover 事件不同，只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。如果鼠标指针穿过任何子元素，同样会触发 mouseover 事件。mouseenter([[data],fn])"
+                  href="https://api.jquery.com/mouseenter/" data-src="jQuery.fn.mouseenter">
+                    .mouseenter()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 mouseleave" title="（不会发生事件冒泡）。与 mouseout 事件不同，只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。如果鼠标指针离开任何子元素，同样会触发 mouseout 事件。mouseleave([[data],fn])"
+                  href="https://api.jquery.com/mouseleave/" data-src="jQuery.fn.mouseleave">
+                    .mouseleave()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 mousemove" title="当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。mousemove事件处理函数会被传递一个变量——事件对象，其.clientX 和 .clientY 属性代表鼠标的坐标。mousemove([[data],fn])"
+                  href="https://api.jquery.com/mousemove/" data-src="jQuery.fn.mousemove">
+                    .mousemove()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 mouseout" title="当鼠标指针从元素上移开时，发生 mouseout 事件。与 mouseleave 事件不同，不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。mouseout([[data],fn])"
+                  href="https://api.jquery.com/mouseout/" data-src="jQuery.fn.mouseout">
+                    .mouseout()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 mouseover" title="当鼠标指针位于元素上方时，会发生 mouseover 事件。与 mouseenter 事件不同，不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。mouseover([[data],fn])"
+                  href="https://api.jquery.com/mouseover/" data-src="jQuery.fn.mouseover">
+                    .mouseover()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 mouseup" title="当鼠标按键放开时触发，mouseup([[data],fn])"
+                  href="https://api.jquery.com/mouseup/" data-src="jQuery.fn.mouseup">
+                    .mouseup()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 toggle-event v1-8-d v1-9-r removed old-version" title="用于绑定两个或多个事件处理器函数，以响应被选元素的轮流的 click 事件。如果元素是可见的，切换为隐藏的；如果元素是隐藏的，切换为可见的。toggle([speed],[easing],[fn])"
+                  href="https://api.jquery.com/toggle-event/" data-src="jQuery.fn.toggle">
+                    .toggle()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Event Object 事件对象
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-3 event-currentTarget" title="在事件冒泡阶段中的当前DOM元素"
+                  href="https://api.jquery.com/event.currentTarget/" data-src="">
+                    event.currentTarget
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1 event-data" title="当前执行的处理器被绑定的时候，包含可选的数据传递给jQuery.fn.bind，即事件定义时给的data"
+                  href="https://api.jquery.com/event.data/" data-src="">
+                    event.data
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 event-isDefaultPrevented" title="根据事件对象中是否调用过 event.preventDefault()(阻止事件默认行为) 方法来返回一个布尔值"
+                  href="https://api.jquery.com/event.isDefaultPrevented/" data-src="">
+                    event.isDefaultPrevented()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 event-isImmediatePropagationStopped" title="根据事件对象中是否调用过 event.stopImmediatePropagation() 方法来返回一个布尔值"
+                  href="https://api.jquery.com/event.isImmediatePropagationStopped/" data-src="">
+                    event.isImmediatePropagationStopped()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 event-isPropagationStopped" title="根据事件对象中是否调用过 event.stopPropagation() 方法来返回一个布尔值"
+                  href="https://api.jquery.com/event.isPropagationStopped/" data-src="">
+                    event.isPropagationStopped()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-3 event-namespace" title="当事件被触发时此属性包含指定的命名空间,多使用trigger()调用"
+                  href="https://api.jquery.com/event.namespace/" data-src="">
+                    event.namespace
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0-4 event-pageX" title="鼠标相对于文档的左边缘的位置"
+                  href="https://api.jquery.com/event.pageX/" data-src="">
+                    event.pageX
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0-4 event-pageY" title="鼠标相对于文档的上边缘的位置"
+                  href="https://api.jquery.com/event.pageY/" data-src="">
+                    event.pageY
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 event-preventDefault" title="阻止默认事件行为的触发。例如，在执行这个方法后，如果点击一个锚点，就不会让浏览器跳转到新的 URL 去了。我们可以用 event.isDefaultPrevented() 来确定这个方法是否(在那个事件对象上)调用过了"
+                  href="https://api.jquery.com/event.preventDefault/" data-src="">
+                    event.preventDefault()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-4 event-relatedTarget" title="在事件中涉及的其它任何DOM元素。对于 mouseout 事件，它指向被进入的元素；对于 mousein 事件，它指向被离开的元素"
+                  href="https://api.jquery.com/event.relatedTarget/" data-src="">
+                    event.relatedTarget
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 event-result" title="这个属性包含了当前事件事件最后触发的那个处理函数（即前一个事件处理函数的返回值）的返回值，除非值是 undefined"
+                  href="https://api.jquery.com/event.result/" data-src="">
+                    event.result
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 event-stopImmediatePropagation" title="阻止剩余的事件处理函数执行并且防止事件冒泡到DOM树上。除了阻止元素上其它的事件处理函数的执行，这个方法还会通过在内部调用 event.stopPropagation() 来停止事件冒泡。如果仅仅想要停止事件冒泡到前辈元素上，而让这个元素上的其它事件处理函数继续执行，我们可以使用event.stopPropagation() 来代替"
+                  href="https://api.jquery.com/event.stopImmediatePropagation/" data-src="">
+                    event.stopImmediatePropagation()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 event-stopPropagation" title="防止事件冒泡到DOM树上，也就是不触发的任何前辈元素上的事件处理函数.这个方法对 trigger() 来自定义的事件同样有效"
+                  href="https://api.jquery.com/event.stopPropagation/" data-src="">
+                    event.stopPropagation()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 event-target" title="最初触发事件的DOM元素,即事件目标对象"
+                  href="https://api.jquery.com/event.target/" data-src="">
+                    event.target
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2-6 event-timeStamp" title="(事件触发时距离打开网页的毫秒数)这个属性返回事件触发时距离1970年1月1日的毫秒数，并不是"
+                  href="https://api.jquery.com/event.timeStamp/" data-src="">
+                    event.timeStamp
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 event-type" title="触发的事件的事件类型，如click"
+                  href="https://api.jquery.com/event.type/" data-src="">
+                    event.type
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-3 event-which" title="针对键盘和鼠标事件，这个属性能确定你到底按的是哪个键或按钮.event.which 将 event.keyCode 和 event.charCode 标准化了"
+                  href="https://api.jquery.com/event.which/" data-src="">
+                    event.which
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+      <article id="effects" class="effects">
+        <h1>
+          Effects 效果
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                Basics 基础
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 hide" title="隐藏显示的元素，hide([speed,[easing],[fn]])。speed:三种预定速度之一的字符串('slow','normal', or 'fast')或表示动画时长的毫秒数值(如：1000).easing:(Optional) 用来指定切换效果，默认是'swing'，可用参数'linear'.fn:在动画完成时执行的函数，每个元素执行一次" href="https://api.jquery.com/hide/"
+                  data-src="jQuery.fn.hide">
+                    .hide()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 show" title="显示隐藏的匹配元素.show([speed,[easing],[fn]])" href="https://api.jquery.com/show/"
+                  data-src="jQuery.fn.show">
+                    .show()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 toggle" title="如果元素是可见的，切换为隐藏的；如果元素是隐藏的，切换为可见的。toggle([speed],[easing],[fn])" href="https://api.jquery.com/toggle/"
+                  data-src="jQuery.fn.toggle">
+                    .toggle()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Custom 定制的
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 animate" title="用于创建自定义动画的函数。animate(params,[speed],[easing],[fn])。params:一组包含作为动画属性和终值的样式属性和及其值的集合。speed:三种预定速度之一的字符串('slow','normal', or 'fast')或表示动画时长的毫秒数值(如：1000)。easing:要使用的擦除效果的名称(需要插件支持).默认jQuery提供'linear' 和 'swing'。fn:在动画完成时执行的函数，每个元素执行一次。"
+                  href="https://api.jquery.com/animate/" data-src="jQuery.fn.animate">
+                    .animate()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 clearQueue" title="清空对象上尚未执行的所有队列，跟 stop(true)类似，但 stop(true)只能清空动画队列，而这个可以清空所有通过 .queue() 创建的队列。clearQueue([queueName])。 queueName默认值为Fx，动画队列"
+                  href="https://api.jquery.com/clearQueue/" data-src="jQuery.fn.clearQueue">
+                    .clearQueue()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 delay" title="设置一个延时来推迟执行队列中之后的项目，delay(duration,[queueName])，duration:延时时间，单位：毫秒。queueName:队列名词，默认是Fx，动画队列。（不是类似于alert()，应该是设置settimeout，然后增加延迟时间，所以对非jquery动画无效）"
+                  href="https://api.jquery.com/delay/" data-src="jQuery.fn.delay">
+                    .delay()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 dequeue" title="从队列最前端移除一个队列函数，并执行他。（多用于取消queue（））。queue(function () {$(this).dequeue();});"
+                  href="https://api.jquery.com/dequeue/" data-src="jQuery.fn.dequeue">
+                    .dequeue()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 jQuery-dequeue" title="移除一个队列。.queue(function() {$( this ).toggleClass( 'red' );$.dequeue( this );})"
+                  href="https://api.jquery.com/jQuery.dequeue/" data-src="jQuery.dequeue">
+                    jQuery.dequeue()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-9 finish" title="会导致所有排队的动画的CSS属性跳转到他们的最终值finish( [queue ] )。queue停止动画队列中的名称,finish()相当于stop(false,true)"
+                  href="https://api.jquery.com/finish/" data-src="jQuery.fn.finish">
+                    .finish()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-3 jQuery-fx-interval" title="设置动画的显示帧速（即。。。毫秒显示一次）。jQuery.fx.interval = 100"
+                  href="https://api.jquery.com/jQuery.fx.interval/" data-src="jQuery.fx.interval">
+                    jQuery.fx.interval
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 jQuery-fx-off" title="把这个属性设置为true可以立即关闭所有动画(所有效果会立即执行完毕)。当把这个属性设成false之后，可以重新开启所有动画。如jQuery.fx.off = true；"
+                  href="https://api.jquery.com/jQuery.fx.off/" data-src="jQuery.fx.off">
+                    jQuery.fx.off
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 queue" title="（添加一个自定义队列queue（function（）{$(this).dequeue()}））显示或操作在匹配元素上执行的函数队列"
+                  href="https://api.jquery.com/queue/" data-src="jQuery.fn.queue">
+                    .queue()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 jQuery-queue" title="Show or manipulate the queue of functions to be executed on the matched element."
+                  href="https://api.jquery.com/jQuery.queue/" data-src="jQuery.queue">
+                    jQuery.queue()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 stop" title="stop(clearQueue清空后面队列,jumpToEnd是否跳至最终状态),默认为(true,false)"
+                  href="https://api.jquery.com/stop/" data-src="jQuery.fn.stop">
+                    .stop()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Fading 衰退，逐渐消散
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 fadeIn" title="fadeIn([speed],[easing],[fn])，(将display设为none)并通过不透明度的变化来实现所有匹配元素的淡入效果，并在动画完成后可选地触发一个回调函数。这个动画只调整元素的不透明度，也就是说所有匹配的元素的高度和宽度不会发生变化speed(slow,normal, or fast)或毫秒数。easing默认是swing，可用参数linear"
+                  href="https://api.jquery.com/fadeIn/" data-src="jQuery.fn.fadeIn">
+                    .fadeIn()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 fadeOut" title="fadeOut([speed],[easing],[fn])通过不透明度的变化来实现所有匹配元素的淡出效果，并在动画完成后(将display设为none)并可选地触发一个回调函数。这个动画只调整元素的不透明度，也就是说所有匹配的元素的高度和宽度不会发生变化"
+                  href="https://api.jquery.com/fadeOut/" data-src="jQuery.fn.fadeOut">
+                    .fadeOut()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 fadeTo" title="fadeTo([[speed],opacity,[easing],[fn]])把所有匹配元素的不透明度以渐进方式调整到指定的不透明度，并在动画完成后可选地触发一个回调函数。这个动画只调整元素的不透明度，也就是说所有匹配的元素的高度和宽度不会发生变化"
+                  href="https://api.jquery.com/fadeTo/" data-src="jQuery.fn.fadeTo">
+                    .fadeTo()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-4 fadeToggle" title="fadeToggle([speed,[easing],[fn]])将隐藏的显现，显现的隐藏"
+                  href="https://api.jquery.com/fadeToggle/" data-src="jQuery.fn.fadeToggle">
+                    .fadeToggle()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Sliding 滑动
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 slideDown" title="slideDown([speed],[easing],[fn])先将display设为block，通过高度变化（向下增大）来动态地显示所有匹配的元素，在显示完成后可选地触发一个回调函数。这个动画效果只调整元素的高度，可以使匹配的元素以“滑动”的方式显示出来。在jQuery 1.3中，上下的padding和margin也会有动画，效果更流畅。"
+                  href="https://api.jquery.com/slideDown/" data-src="jQuery.fn.slideDown">
+                    .slideDown() 
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 slideToggle" title="slideToggle([speed],[easing],[fn])隐藏的显现，显现的隐藏"
+                  href="https://api.jquery.com/slideToggle/" data-src="jQuery.fn.slideToggle">
+                    .slideToggle()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 slideUp" title="slideUp([speed],[easing],[fn])通过高度变化（从下减小）来动态地隐藏所有匹配的元素，在隐藏完成后先将display设为none，可选地触发一个回调函数。这个动画效果只调整元素的高度，可以使匹配的元素以“滑动”的方式显示出来。"
+                  href="https://api.jquery.com/slideUp/" data-src="jQuery.fn.slideUp">
+                    .slideUp()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+      <article id="ajax" class="ajax">
+        <h1>
+          Ajax 创建交互式网页应用的网页开发技术
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                Global Ajax Event Handlers 全局Ajax事件处理程序
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 ajaxComplete" title="ajaxComplete(callback).AJAX 请求完成时执行函数。Ajax 事件。XMLHttpRequest 对象和设置作为参数传递给回调函数。"
+                  href="https://api.jquery.com/ajaxComplete/" data-src="jQuery.fn.ajaxComplete">
+                    .ajaxComplete()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 ajaxError" title="ajaxError(callback).AJAX 请求发生错误时执行函数。Ajax 事件。XMLHttpRequest 对象和设置作为参数传递给回调函数。捕捉到的错误可作为最后一个参数传递"
+                  href="https://api.jquery.com/ajaxError/" data-src="jQuery.fn.ajaxError">
+                    .ajaxError()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 ajaxSend" title="ajaxSend(callback).AJAX 请求发送前执行函数。Ajax 事件。XMLHttpRequest 对象和设置作为参数传递给回调函数。"
+                  href="https://api.jquery.com/ajaxSend/" data-src="jQuery.fn.ajaxSend">
+                    .ajaxSend()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 ajaxStart" title="ajaxStart(callback).AJAX 请求开始时执行函数。Ajax 事件."
+                  href="https://api.jquery.com/ajaxStart/" data-src="jQuery.fn.ajaxStart">
+                    .ajaxStart()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 ajaxStop" title="ajaxStop(callback).AJAX 请求结束时执行函数。Ajax 事件."
+                  href="https://api.jquery.com/ajaxStop/" data-src="jQuery.fn.ajaxStop">
+                    .ajaxStop()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 ajaxSuccess" title="ajaxSuccess(callback).AJAX 请求成功时执行函数。Ajax 事件。XMLHttpRequest 对象和设置作为参数传递给回调函数。"
+                  href="https://api.jquery.com/ajaxSuccess/" data-src="jQuery.fn.ajaxSuccess">
+                    .ajaxSuccess()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Helper Functions 辅助功能
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-2 jQuery-param" title="jQuery.param(obj,[traditional]).将表单元素数组或者对象序列化。是.serialize()的核心方法。obj:数组或jQuery对象会按照name/value对进行序列化，普通对象按照key/value对进行序列化。traditional:是否使用传统的方式浅层序列化（myObject = {a: {one: 1,two: 2,three: 3},b: [1,2,3]};$.param(myObject);得a[one]=1&a[two]=2&a[three]=3&b[]=1&b[]=2&b[]=3；$.param(myObject, true);得a=[object+Object]&b=1&b=2&b=3）。decodeURIComponent($.param(myObject))可以将乱码转正"
+                  href="https://api.jquery.com/jQuery.param/" data-src="jQuery.param">
+                    jQuery.param()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 serialize" title="serialize()。序列表表格内容为字符串。"
+                  href="https://api.jquery.com/serialize/" data-src="jQuery.fn.serialize">
+                    .serialize()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 serializeArray" title="serializeArray()。序列化表格元素 (类似 '.serialize()' 方法) 返回 JSON 数据结构数据。"
+                  href="https://api.jquery.com/serializeArray/" data-src="jQuery.fn.serializeArray">
+                    .serializeArray()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Low-Level Interface 低级别的接口
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 jQuery-ajax" title="jQuery.ajax(url,[settings])。通过 HTTP 请求加载远程数据"
+                  href="https://api.jquery.com/jQuery.ajax/" data-src="jQuery.ajax">
+                    jQuery.ajax()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1 jQuery-ajaxSetup" title="jQuery.ajaxSetup([options])。设置全局 AJAX 默认选项。参数见 '$.ajax' 说明。"
+                  href="https://api.jquery.com/jQuery.ajaxSetup/" data-src="jQuery.ajaxSetup">
+                    jQuery.ajaxSetup()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Shorthand Methods 速记方法
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 jQuery-get" title="jQuery.get(url, [data], [callback], [type])。通过远程 HTTP GET 请求载入信息。url:待载入页面的URL地址。data:待发送 Key/value 参数。callback:载入成功时回调函数。type:返回内容格式，xml, html, script, json, text, _default。"
+                  href="https://api.jquery.com/jQuery.get/" data-src="jQuery.get">
+                    jQuery.get()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-getJSON" title="jQuery.getJSON(url, [data], [callback]).通过 HTTP GET 请求载入 JSON 数据。"
+                  href="https://api.jquery.com/jQuery.getJSON/" data-src="jQuery.getJSON">
+                    jQuery.getJSON()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-getScript" title="jQuery.getScript(url, [callback])。通过 HTTP GET 请求载入并执行一个 JavaScript 文件。"
+                  href="https://api.jquery.com/jQuery.getScript/" data-src="jQuery.getScript">
+                    jQuery.getScript()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 load" title="load(url, [data], [callback])。载入远程 HTML 文件代码并插入至 DOM 中."
+                  href="https://api.jquery.com/load/" data-src="jQuery.fn.load">
+                    .load()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-post" title="jQuery.post(url, [data], [callback], [type]).通过远程 HTTP POST 请求载入信息."
+                  href="https://api.jquery.com/jQuery.post/" data-src="jQuery.post">
+                    jQuery.post()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+      <article id="core" class="core">
+        <h1>
+          Core  核心，要点
+        </h1>
+        <div>
+          <div>
+            <section>
+              <h2>
+                jQuery Object
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 jQuery" title="$()。jQuery([selector,[context]])。selector:用来查找的字符串。context:作为待查找的 DOM 元素集、文档或 jQuery 对象。jQuery(html,[ownerDocument])。html:用于动态创建DOM元素的HTML标记字符串。ownerDocument:创建DOM元素所在的文档"
+                  href="https://api.jquery.com/jQuery/" data-src="jQuery">
+                    jQuery()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-noConflict" title="jQuery.noConflict([extreme])。运行这个函数将变量$的控制权让渡给第一个实现它的那个库。extreme：传入 true 来允许彻底将jQuery变量还原"
+                  href="https://api.jquery.com/jQuery.noConflict/" data-src="jQuery.noConflict">
+                    jQuery.noConflict()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 jQuery-sub v1-7-d v1-9-r removed old-version" title="Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object."
+                  href="https://api.jquery.com/jQuery.sub/" data-src="jQuery.sub">
+                    jQuery.sub()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 jQuery-when" title="jQuery.when(deferreds)。提供一种方法来执行一个或多个对象的回调函数，延迟对象通常表示异步事件。如果单一延迟传递给jQuery.when ，它是通过这个方法和延迟对象附加的其他方法可访问绑定的回调函数返回的，如defered.then 。当延迟得到解决或者拒绝，通常的代码创建了原来的延迟，适当的回调将被调用。"
+                  href="https://api.jquery.com/jQuery.when/" data-src="jQuery.when">
+                    jQuery.when()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Utilities 实用程序，公用程式
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 jQuery-boxModel v1-3-d v1-8-r removed old-version" title="States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model."
+                  href="https://api.jquery.com/jQuery.boxModel/" data-src="jQuery.boxModel">
+                    jQuery.boxModel
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-browser v1-3-d v1-9-r removed old-version" title="Contains flags for the useragent, read from navigator.userAgent. We recommend against using this property; please try to use feature detection instead (see jQuery.support). jQuery.browser may be moved to a plugin in a future release of jQuery."
+                  href="https://api.jquery.com/jQuery.browser/" data-src="jQuery.browser">
+                    jQuery.browser
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 jQuery-contains" title="jQuery.contains(container,contained)。一个DOM节点是否包含另一个DOM节点。container:DOM元素作为容器，可以包含其他元素。contained:DOM节点，可能被其他元素所包含"
+                  href="https://api.jquery.com/jQuery.contains/" data-src="jQuery.contains">
+                    jQuery.contains()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-each" title="jQuery.each(object, [callback])。通用例遍方法，可用于例遍对象和数组。不同于例遍 jQuery 对象的 $().each() 方法，此方法可用于例遍任何对象。回调函数拥有两个参数：第一个为对象的成员或数组的索引，第二个为对应变量或内容。如果需要退出 each 循环可使回调函数返回 false，其它返回值将被忽略function(i, n)"
+                  href="https://api.jquery.com/jQuery.each/" data-src="jQuery.each">
+                    jQuery.each()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-extend" title="$.extend([deep],target,object1,[objectN])用一个或多个对象来扩展目标对象,只有目标对象被改变，(如果没有指定目标对象，即只有一个参数，则会将jQuery扩展，如$.extend({a：1}) 可添加插件)"
+                  href="https://api.jquery.com/jQuery.extend/" data-src="jQuery.extend">
+                    jQuery.extend()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0-4 jQuery-globalEval" title="将所指定的js代码（用字符串形式的）运行一次并删除"
+                  href="https://api.jquery.com/jQuery.globalEval/" data-src="jQuery.globalEval">
+                    jQuery.globalEval()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-grep" title="jQuery.grep(array, callback, [invert]).使用过滤函数过滤数组元素。此函数至少传递两个参数：待过滤数组和过滤函数。过滤函数必须返回 true 以保留元素或 false 以删除元素。invert:如果 invert 为 false 或为设置，则函数返回数组中由过滤函数返回 true 的元素，当invert 为 true，则返回过滤函数中返回 false 的元素集"
+                  href="https://api.jquery.com/jQuery.grep/" data-src="jQuery.grep">
+                    jQuery.grep()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 jQuery-inArray" title="jQuery.inArray(value,array,[fromIndex]).确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。fromIndex:用来搜索数组队列(即从下标几开始)，默认值为0。"
+                  href="https://api.jquery.com/jQuery.inArray/" data-src="jQuery.inArray">
+                    jQuery.inArray()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 jQuery-isArray" title="jQuery.isArray(obj).测试对象是否为数组"
+                  href="https://api.jquery.com/jQuery.isArray/" data-src="jQuery.isArray">
+                    jQuery.isArray()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 jQuery-isEmptyObject" title="jQuery.isEmptyObject(obj)。测试对象是否是空对象（不包含任何属性）。这个方法既检测对象本身的属性，也检测从原型继承的属性（因此没有使用hasOwnProperty）。"
+                  href="https://api.jquery.com/jQuery.isEmptyObject/" data-src="jQuery.isEmptyObject">
+                    jQuery.isEmptyObject()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 jQuery-isFunction" title="jQuery.isFunction(obj)。测试对象是否为函数。jQuery 1.3以后，在IE浏览器里，浏览器提供的函数比如'alert'还有 DOM 元素的方法比如 'getAttribute' 将不认为是函数。"
+                  href="https://api.jquery.com/jQuery.isFunction/" data-src="jQuery.isFunction">
+                    jQuery.isFunction()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 jQuery-isNumeric" title="jQuery.isNumeric(value)。确定它的参数是否是一个数字$.isNumeric() 方法检查它的参数是否代表一个数值。如果是这样，它返回 true。否则，它返回false。该参数可以是任何类型的."
+                  href="https://api.jquery.com/jQuery.isNumeric/" data-src="jQuery.isNumeric">
+                    jQuery.isNumeric()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 jQuery-isPlainObject" title="jQuery.isPlainObject(obj)。测试对象是否是纯粹的对象（通过 {} 或者 new Object 创建的）。"
+                  href="https://api.jquery.com/jQuery.isPlainObject/" data-src="jQuery.isPlainObject">
+                    jQuery.isPlainObject()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-3 jQuery-isWindow" title="jQuery.isWindow(obj)。测试对象是否是窗口（有可能是Frame）。."
+                  href="https://api.jquery.com/jQuery.isWindow/" data-src="jQuery.isWindow">
+                    jQuery.isWindow()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-4 jQuery-isXMLDoc" title="Check to see if a DOM node is within an XML document (or is an XML document)."
+                  href="https://api.jquery.com/jQuery.isXMLDoc/" data-src="jQuery.isXMLDoc">
+                    jQuery.isXMLDoc()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-2 jQuery-makeArray" title="jQuery.makeArray(obj).将类数组对象转换为数组对象。类数组对象有 length 属性，其成员索引为 0 至 length - 1。实际中此函数在 jQuery 中将自动使用而无需特意转换。"
+                  href="https://api.jquery.com/jQuery.makeArray/" data-src="jQuery.makeArray">
+                    jQuery.makeArray()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-map" title="jQuery.map(arr|obj,callback)。将一个数组中的元素转换到另一个数组中。作为参数的转换函数会为每个数组元素调用，而且会给这个转换函数传递一个表示被转换的元素作为参数。转换函数可以返回转换后的值、null（删除数组中的项目）或一个包含值的数组，并扩展至原始数组中。$.map( [0,1,2], function(n){return [ n, n + 1 ];})得[0, 1, 1, 2, 2, 3];（对原数组无影响）"
+                  href="https://api.jquery.com/jQuery.map/" data-src="jQuery.map">
+                    jQuery.map()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-merge" title="jQuery.merge(first,second)。合并两个数组返回的结果会修改第一个数组的内容——第一个数组的元素后面跟着第二个数组的元素。要去除重复项，请使用$.unique()."
+                  href="https://api.jquery.com/jQuery.merge/" data-src="jQuery.merge">
+                    jQuery.merge()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 jQuery-noop" title="jQuery.noop 一个空函数" href="https://api.jquery.com/jQuery.noop/"
+                  data-src="jQuery.noop">
+                    jQuery.noop
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-3 jQuery-now" title="$.now()从1970年1月1日到现在的毫秒数"
+                  href="https://api.jquery.com/jQuery.now/" data-src="jQuery.now">
+                    jQuery.now()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-8 jQuery-parseHTML" title="$.parseHTML('<div></div>')相当于$('<div></div>')"
+                  href="https://api.jquery.com/jQuery.parseHTML/" data-src="jQuery.parseHTML">
+                    jQuery.parseHTML()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-1 jQuery-parseJSON" title="jQuery.parseJSON(json)接受一个JSON字符串，返回解析后的对象.如果你什么都不传入，或者一个空字符串、null或undefined，parseJSON都会返回 null "
+                  href="https://api.jquery.com/jQuery.parseJSON/" data-src="jQuery.parseJSON">
+                    jQuery.parseJSON()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 jQuery-parseXML" title="jQuery.parseXML(data)。解析一个字符串到一个XML文件。jQuery.parseXML使用原生解析函数浏览器创建一个有效的XML文档。这文档可以被传递给jQuery创建一个典型的jQuery对象，可以查询及操作。"
+                  href="https://api.jquery.com/jQuery.parseXML/" data-src="jQuery.parseXML">
+                    jQuery.parseXML()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 jQuery-proxy" title="jQuery.proxy(function,context)。返回一个新函数，并且这个函数始终保持了特定的作用域(返回一个新函数，并指定第二个参数为this)"
+                  href="https://api.jquery.com/jQuery.proxy/" data-src="jQuery.proxy">
+                    jQuery.proxy()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 jQuery-support v1-9-d old-version" title="ObjectjQuery.support。一组用于展示不同浏览器各自特性和bug的属性集合"
+                  href="https://api.jquery.com/jQuery.support/" data-src="jQuery.support">
+                    jQuery.support
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 jQuery-trim" title="jQuery.trim(str)。去掉字符串起始和结尾的空格"
+                  href="https://api.jquery.com/jQuery.trim/" data-src="jQuery.trim">
+                    jQuery.trim()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-3 jQuery-type" title="jQuery.type(obj)。检测obj的数据类型jQuery.type(true) === boolean  jQuery.type(3) === number    jQuery.type(test) === string    jQuery.type(function(){}) === function    jQuery.type([]) === array     jQuery.type(new Date()) === date     jQuery.type(/test/) === regexp"
+                  href="https://api.jquery.com/jQuery.type/" data-src="jQuery.type">
+                    jQuery.type()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-1-3 jQuery-unique" title="jQuery.unique(array)。删除数组中重复元素。只处理删除DOM元素数组，而不能处理字符串或者数字数组"
+                  href="https://api.jquery.com/jQuery.unique/" data-src="jQuery.unique">
+                    jQuery.unique()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div>
+            <section>
+              <h2>
+                DOM Element Methods 
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 get" title="get([index])。取得其中一个匹配的元素。 num表示取得第几个匹配的元素。从0开始，返回的是DOM对象，类似的有eq(index),不过eq(index)返回的是jQuery对象。$(this).get(0)与$(this)[0]等价"
+                  href="https://api.jquery.com/get/" data-src="jQuery.fn.get">
+                    .get()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 index" title="index([selector|element])。搜索匹配的元素，并返回相应元素的索引值，从0开始计数（下标）"
+                  href="https://api.jquery.com/index/" data-src="jQuery.fn.index">
+                    .index()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 size v1-8-d old-version" title="size()。jQuery 对象中元素的个数。当前匹配的元素个数。与 length 将返回相同的值"
+                  href="https://api.jquery.com/size/" data-src="jQuery.fn.size">
+                    .size()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4 toArray" title="jQuery.toArray()。把jQuery集合中所有DOM元素恢复成一个数组"
+                  href="https://api.jquery.com/toArray/" data-src="jQuery.fn.toArray">
+                    .toArray()
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Internals 内部的
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-0 jquery-2" title="$.fn.jquery或$(document).jquery返回代表 jQuery 版本号的字符串"
+                  href="https://api.jquery.com/jquery-2/" data-src="jQuery.fn.jquery">
+                    .jquery
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 context v1-10-d old-version" title="context 返回传给jQuery()的原始的DOM节点内容，即jQuery()的第二个参数。如果没有指定，那么context指向当前的文档(document)。可以与selector一起使用，用于精确检测选择器查询情况。这两个属性对插件开发人员很有用。"
+                  href="https://api.jquery.com/context/" data-src="jQuery.fn.context">
+                    .context
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-4-1 jQuery-error" title="jQuery.error(message)。接受一个字符串，并且直接抛出一个包含这个字符串的异常。这个方法的主要目的是提供给插件开发人员，让他们可以重载这个方法，并以更好的方式显示错误，或者提供更多信息"
+                  href="https://api.jquery.com/jQuery.error/" data-src="jQuery.error">
+                    jQuery.error()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 length" title="length。jQuery 对象中元素的个数。这个函数的返回值与 jQuery 对象的 size() 属性一致."
+                  href="https://api.jquery.com/length/" data-src="jQuery.fn.length">
+                    .length
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-0 pushStack" title="$([]).pushStack(dom集合)将dom集合中的dom对象放入之前的数组中"
+                  href="https://api.jquery.com/pushStack/" data-src="jQuery.fn.pushStack">
+                    .pushStack()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-3 selector v1-7-d old-version" title="返回传给jQuery()的原始选择器。换句话说，就是返回你用什么选择器来找到这个元素的。可以与context一起使用，用于精确检测选择器查询情况。这两个属性对插件开发人员很有用"
+                  href="https://api.jquery.com/selector/" data-src="jQuery.fn.selector">
+                    .selector
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h2>
+                Deferred Object 递延对象
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-6 deferred-always" title="deferred.always(alwaysCallbacks,[alwaysCallbacks])。当递延对象是解决或拒绝时被调用添加处理程序。alwaysCallbacks：一个函数，或者函数数组，当递延对象是解决或拒绝时被调用；[alwaysCallbacks]：附加可选的一个函数，或者函数数组，当递延对象是解决或拒绝时被调用"
+                  href="https://api.jquery.com/deferred.always/" data-src="">
+                    deferred.always()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-done" title="deferred.done(doneCallbacks[,doneCallbacks])。当延迟成功时调用一个函数或者数组函数.该参数可以是一个函数或一个函数的数组。当延迟成功时，doneCallbacks被调用。回调执行是依照他们添加的顺序。一旦deferred.done()返回延迟对象，延迟对象的其它方法也可以链接到了这里，包括增加.done()方法。当延迟解决，doneCallbacks执行使用参数提供给resolve或resolveWith方法依照添加的顺序调用。"
+                  href="https://api.jquery.com/deferred.done/" data-src="">
+                    deferred.done()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-fail" title="deferred.fail(failCallbacks[,failCallbacks])。当延迟失败时调用一个函数或者数组函数.。该参数可以是一个函数或一个函数的数组。当延迟失败时，doneCallbacks被调用。回调执行是依照他们添加的顺序。一旦deferred.fail()返回延迟对象，延迟对象的其它方法也可以链接到了这里，包括增加.done()方法。当延迟解决，doneCallbacks执行使用参数提供给resolve或resolveWith方法依照添加的顺序调用。"
+                  href="https://api.jquery.com/deferred.fail/" data-src="">
+                    deferred.fail()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-isRejected v1-7-d v1-8-r removed old-version"
+                  title="Determine whether a Deferred object has been rejected." href="https://api.jquery.com/deferred.isRejected/"
+                  data-src="">
+                    deferred.isRejected()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-isResolved v1-7-d v1-8-r removed old-version"
+                  title="Determine whether a Deferred object has been resolved." href="https://api.jquery.com/deferred.isResolved/"
+                  data-src="">
+                    deferred.isResolved()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 deferred-notify" title="deferred.notify(args)。调用一个给定args的递延对象上的进行中的回调 （progressCallbacks）通常情况下，只有一个递延的创建者，应调用此方法;你可以防止其他代码改变Deferred的状态或者通过deferred.promise()返回一个受限制的承诺对象报告状态。当 deferred.notify 被访问， 任何progressCallbacks 可以通过访问deferred.then 好或者 deferred.progress来添加。回调是在它们被添加的顺序执行。每次通过来自.notify()的args回调。任何为.notify()后递延是解决或拒绝（或之后添加任何progressCallbacks ）被忽略。"
+                  href="https://api.jquery.com/deferred.notify/" data-src="">
+                    deferred.notify()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 deferred-notifyWith" title="deferred.notifyWith(context,[args])。去掉字符串起始和结尾的空格。当deferred.notifyWith，任何doneCallbacks 添加的 progressCallbacks，deferred.then或deferred.fail被调用。回调按他们添加的顺序执行。每个回调传递的args在deferred.reject()中调用。notifyWith()延迟后解决或拒绝( 或添加任何progressCallbacks后）被忽略。"
+                  href="https://api.jquery.com/deferred.notifyWith/" data-src="">
+                    deferred.notifyWith()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-6 deferred-pipe v1-8-d old-version" title="Utility method to filter and/or chain Deferreds."
+                  href="https://api.jquery.com/deferred.pipe/" data-src="">
+                    deferred.pipe()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 deferred-progress" title="deferred.progress(progressCallbacks)。当Deferred对象时生成进度通知时添加被访问处理程序。 这个参数可以是一个单一的功能或功能的阵列。当递延通过调用生成的进度通知notify或notifyWith，progressCallbacks 被访问。后来deferred.progress()返回Deferred对象。Deferred对象有方法可以链接到这一个。当递延解决或拒绝，进展回调将不再被调用。"
+                  href="https://api.jquery.com/deferred.progress/" data-src="">
+                    deferred.progress()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-promise" title="deferred.promise([type],[target])。返回一个 Promise 对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。.promise()方法返回一个动态生成的Promise对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。 默认情况下， type是"fx" ，这意味着当选定的元素已完成所有动画是返回的Promise是解决的。 解决上下文和唯一的参数是哪个集合到.promise()被调用。 如果target是提供，.promise()将附加到它的方法，然后返回这个对象，而不是创建一个新的。这对在已经存在的对象上附加Promise的行为非常有用。"
+                  href="https://api.jquery.com/deferred.promise/" data-src="">
+                    deferred.promise()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-reject" title="deferred.reject(args)。拒绝延迟对象，并根据给定的参数调用任何失败的回调函数。当延迟被拒绝，任何failCallbacks添加的deferred.then或deferred.fail被调用。回调按他们添加的顺序执行。每个回调传递的args在deferred.reject()中调用。之后添加任何failCallbacks递延被拒绝进入状态时，立即执行添加，使用的参数被传递给.reject()调用。"
+                  href="https://api.jquery.com/deferred.reject/" data-src="">
+                    deferred.reject()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-rejectWith" title="deferred.rejectWith(context,[args])。拒绝延迟的对象，并根据给定的上下文和参数调用任何失败的回调函数。当延迟被拒绝，任何doneCallbacks添加的deferred.then或deferred.fail被调用。回调按他们添加的顺序执行。每个回调传递的args在deferred.reject()中调用。之后添加任何failCallbacks递延被拒绝进入状态时，立即执行添加，使用的参数被传递给.reject()调用。"
+                  href="https://api.jquery.com/deferred.rejectWith/" data-src="">
+                    deferred.rejectWith()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-resolve" title="deferred.resolve(args)。解决递延对象，并根据给定的参数调用任何完成的回调函数。当递延被解决，任何failCallbacks添加的deferred.then或deferred.fail被调用。回调按他们添加的顺序执行。每个回调传递的args在deferred.reject()中调用。之后添加任何failCallbacks递延被拒绝进入状态时，立即执行添加，使用的参数被传递给.reject()调用"
+                  href="https://api.jquery.com/deferred.resolve/" data-src="">
+                    deferred.resolve()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-resolveWith" title="deferred.resolveWith(context,[args]).解决递延对象，并根据给定的上下文和参数调用任何完成的回调函数。当递延被解决，任何doneCallbacks 添加的deferred.then或deferred.fail被调用。回调按他们添加的顺序执行。每个回调传递的args在deferred.reject()中调用。之后添加任何failCallbacks递延被拒绝进入状态时，立即执行添加，使用的参数被传递给.reject()调用"
+                  href="https://api.jquery.com/deferred.resolveWith/" data-src="">
+                    deferred.resolveWith()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 deferred-state" title="deferred.state().确定一个Deferred对象的当前状态。deferred.state（）方法返回一个字符串，代表Deferred对象的当前状态。 Deferred对象可以在三种状态之一： pending: Deferred对象是尚未完成状态 (不是 rejected或 resolved).  resolved:  Deferred对象是在解决状态，这意味着，deferred.resolve() 或者 deferred.resolveWith()被对象访问和doneCallbacks被访问（或在被调用的过程中） 。 rejected: Deferred对象是在被拒绝的状态，这意味着，deferred.reject() 或者 deferred.rejectWith() 被对象访问和failCallbacks被访问（或在被调用的过程中） 。 这种方法主要是有用的调试，以确定的，例如，递延是否已经得到解决，即使你打算拒绝它的内部代码。"
+                  href="https://api.jquery.com/deferred.state/" data-src="">
+                    deferred.state()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-5 deferred-then" title="deferred.then(doneFilter [, failFilter ] [, progressFilter ])。添加处理程序被调用时，递延对象得到解决或者拒绝。 所有三个参数（包括progressCallbacks ，在jQuery的1.7 ）可以是一个单独的函数或一个函数的数组。 其中一个参数，也可以为空，如果没有该类型的回调是需要的。或者，使用.done()或.fail()仅设置doneCallbacks或failCallbacks。当递延解决，doneCallbacks被调用。若递延代替拒绝，failCallbacks被调用。回调按他们添加的顺序执行。一旦deferred.then返回延迟对象，延迟对象的其它方法也可以链接到了这里，包括增加.then()方法"
+                  href="https://api.jquery.com/deferred.then/" data-src="">
+                    deferred.then()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-6 promise" title="deferred.promise([type],[target])。返回一个 Promise 对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。.promise()方法返回一个动态生成的Promise对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。 默认情况下， type是fx ，这意味着当选定的元素已完成所有动画是返回的Promise是解决的。 解决上下文和唯一的参数是哪个集合到.promise()被调用。 如果target是提供，.promise()将附加到它的方法，然后返回这个对象，而不是创建一个新的。这对在已经存在的对象上附加Promise的行为非常有用"
+                  href="https://api.jquery.com/promise/" data-src="">
+                    .promise()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div>
+            <section>
+              <h2>
+                Callbacks Object 回调对象
+              </h2>
+              <ul>
+                <li>
+                  <a class="v1-7 jQuery-Callbacks" title="jQuery.callbacks(flags)。一个多用途的回调列表对象，提供了强大的的方式来管理回调函数列表。 $.Callbacks()的内部提供了jQuery的$.ajax() 和 $.Deferred() 基本功能组件。它可以用来作为类似基础定义的新组件的功能。$.Callbacks() 支持的方法，包括 callbacks.add(),callbacks.remove(), callbacks.fire() and callbacks.disable()."
+                  href="https://api.jquery.com/jQuery.Callbacks/" data-src="jQuery.Callbacks">
+                    jQuery.Callbacks()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-add" title="callbacks.add(callbacks)。回调列表中添加一个回调或回调的集合。callbacks：一个函数，或者一个函数数组用来添加到回调列表"
+                  href="https://api.jquery.com/callbacks.add/" data-src="">
+                    callbacks.add()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-disable" title="callbacks.disable()。禁用回调列表中的回调 "
+                  href="https://api.jquery.com/callbacks.disable/" data-src="">
+                    callbacks.disable()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-empty" title="callbacks.empty()。从列表中删除所有的回调."
+                  href="https://api.jquery.com/callbacks.empty/" data-src="">
+                    callbacks.empty()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-fire" title="callbacks.fire(arguments)。禁用回调列表中的回调"
+                  href="https://api.jquery.com/callbacks.fire/" data-src="">
+                    callbacks.fire()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-fired" title="callbacks.fired()。用给定的参数调用所有的回调"
+                  href="https://api.jquery.com/callbacks.fired/" data-src="">
+                    callbacks.fired()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-fireWith" title="callbacks.fireWith([context][,args])。访问给定的上下文和参数列表中的所有回调。context: 该列表中的回调被触发的上下文引用 。args: 一个参数或参数列表传回给回调列表。"
+                  href="https://api.jquery.com/callbacks.fireWith/" data-src="">
+                    callbacks.fireWith()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-has" title="callbacks.has(callback)。确定是否提供的回调列表。callback： 用来搜索的回调"
+                  href="https://api.jquery.com/callbacks.has/" data-src="">
+                    callbacks.has()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-lock" title="callbacks.lock()。锁定在其当前状态的回调列表。"
+                  href="https://api.jquery.com/callbacks.lock/" data-src="">
+                    callbacks.lock()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-locked" title="callbacks.locked()。确定是否已被锁定的回调列表"
+                  href="https://api.jquery.com/callbacks.locked/" data-src="">
+                    callbacks.locked()
+                  </a>
+                </li>
+                <li>
+                  <a class="v1-7 callbacks-remove" title="callbacks.remove(callbacks)。删除回调或回调回调列表的集合。callbacks：一个函数或函数数组，是从回调列表中删除"
+                  href="https://api.jquery.com/callbacks.remove/" data-src="">
+                    callbacks.remove()
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="ads">
+      <a href="http://www.jspplang.org/" target="_blank" title="Go to JavaScript++">
+        <strong>
+          Click here to learn about JavaScript++
+        </strong>
+        , which provides classes, type checking, and modules. It also works with
+        jQuery
+      </a>
+    </div>
+    <div id="about" class="mfp-hide">
+      <fieldset>
+        <strong>
+          Open links:
+        </strong>
+        <label>
+          <input type="radio" name="open_links" value="modal-window">
+          Modal window
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="open_links" value="new-window">
+          New window
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="open_links" value="same-window">
+          Same window
+        </label>
+      </fieldset>
+      <p>
+        <a href="https://github.com/oscarotero/jquery-cheatsheet" title="Get the code from github">
+          Source code
+        </a>
+        | by
+        <a href="https://twitter.com/misteroom">
+          @misteroom
+        </a>
+      </p>
+    </div>
+    <div id="modal" class="mfp-hide">
+      <ul>
+        <li class="link-api">
+          <a href="https://api.jquery.com/wrapAll/" class="selected">
+            API doc
+          </a>
+        </li>
+        <li class="link-src">
+          <a href="http://james.padolsey.com/jquery/2.0.3/jQuery.fn.wrapAll" style="display: block;">
+            Source viewer
+          </a>
+        </li>
+      </ul>
+      <div>
+        <iframe src="">
+        </iframe>
+      </div>
+    </div>
+
+
+  </body>
+  <script src="jquery-1.12.0.js"></script>
+
+</html>

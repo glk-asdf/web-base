@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>otherBar</title>
+	<style>
+	* {
+	    box-sizing: border-box;
+	    word-break: break-all;
+	}
+	.otherBar{
+		width: 50%;
+		margin: 200px;
+		height: 200px;
+		float: left;
+		position: relative;
+		/*border: 1px solid #000;*/
+	}
+	.otherBar-transverse{
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		top: 50%;
+		left: 0;
+		border-top: 1px solid #000;
+		/*transform: translate(-50%, 0%);
+	    -ms-transform: translate(-50%, 0%);
+	    -webkit-transform: translate(-50%, 0%);*/
+	}
+	.otherBar-ul{
+		width: 100%;
+		height: 100%;
+		float: left;
+		display: -webkit-flex;
+    	display: flex;
+    	justify-content: space-between;
+	}
+	.otherBar-li{
+		width: 1px;
+		height: 100%;
+		float: left;
+		position: relative;
+	}
+	.otherBar-li-vertical{
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		top: 50%;
+		left: 0;
+		border-left: 1px solid #000;
+		transform: translate(0, -50%);
+	    -ms-transform: translate(0, -50%);
+	    -webkit-transform: translate(0, -50%);
+	}
+	.otherBar-li-circle{
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		bottom: 100%;
+		left: 50%;
+		border: 1px solid #000;
+		border-radius: 50%;
+		transform: translate(-50%, 0);
+	    -ms-transform: translate(-50%, 0);
+	    -webkit-transform: translate(-50%, 0);
+	}
+	.otherBar-li-down .otherBar-li-circle{
+		top: 100%;
+		bottom: auto;
+	}
+	.otherBar-li-span{
+		position: absolute;
+		height: 12px;
+		line-height: 12px;
+		font-size: 12px;
+		white-space: nowrap;
+		bottom: calc(100% + 12px);
+		left: 50%;
+		transform: translate(-50%, 0);
+	    -ms-transform: translate(-50%, 0);
+	    -webkit-transform: translate(-50%, 0);
+	}
+	.otherBar-li-down .otherBar-li-span{
+		top: calc(100% + 12px);
+		bottom: auto;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="otherBar">
+		<div class="otherBar-transverse"></div>
+		<div class="otherBar-ul">
+			<div class="otherBar-li">
+				<div class="otherBar-li-vertical"><div class="otherBar-li-circle"></div><div class="otherBar-li-span">9.1</div></div>
+			</div>
+			<div class="otherBar-li otherBar-li-down" style="height:80%;">
+				<div class="otherBar-li-vertical"><div class="otherBar-li-circle"></div><div class="otherBar-li-span">8.5</div></div>
+			</div>
+			<div class="otherBar-li" style="height:90%;">
+				<div class="otherBar-li-vertical"><div class="otherBar-li-circle"></div><div class="otherBar-li-span">9.0</div></div>
+			</div>
+			<div class="otherBar-li">
+				<div class="otherBar-li-vertical"><div class="otherBar-li-circle"></div><div class="otherBar-li-span">9.1</div></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

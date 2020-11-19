@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  >  
+</head>  
+<script type="text/javascript" src="../resources/js/jquery/jquery-1.9.1.min.js"></script> 
+<script>  
+// 本质上和选中没关系，只和shift有关（模拟shift多选）
+    var Click=new Array();  
+    Click[0]=0;
+    function shift_select(){  
+        $(".select li").click(function (e){  
+            console.log($(this).index()); 
+            if(e.shiftKey){  
+                Click[1]=($(".select li").index($(this)));
+                var iMin = Math.min(Click[0],Click[1])  
+                var iMax = Math.max(Click[0],Click[1])  
+                $(".select li").removeClass("selected");
+                for(i=iMin;i<=iMax;i++){  
+                    $(".select li:eq("+i+")").addClass("selected")  //为li 标签添加selected类  
+                }  
+            }else if(e.ctrlKey){
+                Click.length=0;
+                Click[0]=$(".select li").index($(this));
+                $(this).toggleClass("selected");
+            }else{  
+                Click.length=0;
+                Click[0]=$(".select li").index($(this));
+                $(".select li").removeClass("selected");
+                $(this).toggleClass("selected");  
+            }  
+        });  
+    }  
+    $(function(){  
+      shift_select();  
+  });  
+    document.onselectstrat=function(event){   //避免文字被选中  
+      event = window.event||event;  
+      event.returnValue = false;  
+  }  
+</script>  
+<style>  
+    .selected{background:#AAAAD8;}  
+    li{cursor:pointer;background:tan;}  
+</style>  
+<body>  
+<div class="select">  
+<ul>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+    <li>yanyan</li>  
+</ul>  
+</div>  
+</body>  
+</html>

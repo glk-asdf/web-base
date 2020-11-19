@@ -1,0 +1,71 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>滑轮控制Div水平滚动</title>  
+  <style type="text/css">  
+    .wrap{width:500px;height:80px;background:#e7e7e7;overflow: auto;overflow-y: hidden;}  
+    .hor_box{width:1200px;height:50px;}  
+    .btn{width:100px;height:50px;background:#ff9900;float:left;margin:3px 10px;}  
+    
+    .ver_box{width:100px;height:500px;overflow: auto;overflow-x: hidden;}  
+    .ver_box .btn{width:90px;height:50px;margin:5px 0px;}  
+  </style>  
+</head>  
+<body>  
+  <div id="abc" class="wrap">  
+    <div id="scrollbar" class="hor_box">  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+      <div class="btn"></div>  
+    </div>  
+  </div>  
+</body>  
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" ></script>  
+<script type="text/javascript">  
+  
+  var firefox = navigator.userAgent.indexOf('Firefox') != -1;   
+  
+  function MouseWheel(e){  
+    e=e||window.event;  
+    if(e.stopPropagation){  
+      e.stopPropagation();  
+    }else{  
+      e.cancelBubble=true;  
+    }  
+    
+    if(e.preventDefault){  
+      e.preventDefault();  
+    }else{  
+      e.returnValue=false;  
+    }  
+    
+    // document.title=(e.wheelDelta+'|'+e.detail);  
+    
+    if(firefox){  
+      if(e.detail<0){  
+        $('#abc').scrollLeft($('#abc').scrollLeft()+60);  
+      }else{  
+        $('#abc').scrollLeft($('#abc').scrollLeft()-60);  
+      }           
+    }else{  
+      if(e.wheelDelta>0){  
+        $('#abc').scrollLeft($('#abc').scrollLeft()+60);  
+      }else{  
+        $('#abc').scrollLeft($('#abc').scrollLeft()-60);  
+      }  
+    }  
+  }  
+  
+  window.onload=function(){  
+    var abc=document.getElementById('abc');  
+    firefox?abc.addEventListener('DOMMouseScroll',MouseWheel,false):(abc.onmousewheel=MouseWheel);  
+  }  
+</script>  
+</html>  

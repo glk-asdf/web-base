@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<td class="first" colspan="2"><div class="title1">产品</div><br><div class="title2">报道量</div><br><div class="title3">地区</div></td>
+			<td>小米手机</td>
+			<td>华为手机</td>
+			<td>苹果手机</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>天津市</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>北京市</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+<style>
+	table {
+		border-collapse: collapse;
+	}
+
+	table, tr, td {
+		border: 1px solid black;
+	}
+
+	td {
+		text-align: center;
+		height: 50px; /*这里需要自己调整，根据自己的需求调整高度*/
+		position: relative;
+	}
+	td[class=first]{
+		width: 100px;
+	}
+	td[class=first]:before {
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 104px;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		display: block;
+		transform: rotate(-75deg);
+		transform-origin: top;
+		-ms-transform: rotate(-75deg);
+		-ms-transform-origin: top;
+	}
+	td[class=first]:after {
+		content: "";
+		position: absolute;
+		width: 1px;
+		height: 75px;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		display: block;
+		transform: rotate(-45deg);
+		transform-origin: top;
+		-ms-transform: rotate(-45deg);
+		-ms-transform-origin: top;
+	}
+	.title1{
+		position: absolute;
+		top: 0px;
+		right:0px;
+	}
+	.title2{
+		position: absolute;
+		top: 26px;
+		right:0px;
+	}
+	.title3{
+		position: absolute;
+		top: 30px;
+		left:0px;
+	}
+</style>
+</html>
